@@ -2,24 +2,25 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-  >
+  <title>100 Doces Sem Açúcar | Tenha seu doce sem adicionar açúcar</title>
 
   <meta
     name="description"
-    content="100 Doces Sem Açúcar — receitas para matar a vontade de doce sem adicionar açúcar às preparações."
+    content="100 receitas de doces sem açúcar adicionado para quem quer cuidar da alimentação sem abrir mão das sobremesas."
   >
 
-  <title>100 Doces Sem Açúcar | Receitas</title>
-
   <style>
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -27,784 +28,1182 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #fffaf4;
-      color: #3d2419;
-      line-height: 1.5;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+      background: #fffaf5;
+      color: #351d15;
+      line-height: 1.45;
+
       overflow-x: hidden;
-      padding-bottom: 78px;
+
+      padding-bottom: 82px;
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
+      height: auto;
       display: block;
     }
 
     a {
       text-decoration: none;
-      color: inherit;
     }
 
     button {
-      font-family: inherit;
+      font: inherit;
     }
+
+
+    /* =========================================================
+       COLORS
+    ========================================================= */
 
     :root {
-      --brown: #4b291d;
-      --brown-dark: #321b13;
-      --caramel: #b8783e;
+      --brown-950: #24110b;
+      --brown-900: #32170f;
+      --brown-800: #482319;
+      --brown-700: #623424;
+
+      --caramel: #b86f35;
       --gold: #d99a4e;
-      --cream: #fffaf4;
-      --cream-dark: #f5e8da;
+
+      --cream: #fffaf5;
+      --cream-2: #f8eee5;
+      --cream-3: #f1dfd0;
+
+      --text: #351d15;
+      --muted: #755f55;
+
       --white: #ffffff;
-      --green: #4f7d48;
-      --text: #3d2419;
-      --muted: #765e52;
-      --border: #ead8c8;
-      --shadow: 0 15px 40px rgba(72, 39, 24, .12);
+
+      --green: #537947;
+
+      --border: #ead8ca;
+
+      --shadow:
+        0 18px 45px rgba(61, 29, 17, .12);
     }
 
-    /* =========================
-       HEADER
-    ========================= */
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255, 250, 244, .96);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .header-inner {
-      width: 100%;
-      padding: 13px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .logo {
-      font-weight: 900;
-      font-size: 14px;
-      line-height: 1.05;
-      letter-spacing: -.4px;
-      color: var(--brown);
-    }
-
-    .logo span {
-      display: block;
-      color: var(--caramel);
-    }
-
-    .header-btn {
-      background: var(--brown);
-      color: white;
-      border-radius: 999px;
-      padding: 10px 14px;
-      font-size: 11px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    /* =========================
-       GENERAL
-    ========================= */
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
 
     .container {
       width: 100%;
-      padding: 0 17px;
+      max-width: 480px;
       margin: 0 auto;
+      padding: 0 18px;
     }
 
     section {
-      padding: 48px 0;
+      width: 100%;
     }
 
     .eyebrow {
       display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #f3e3d4;
-      color: var(--brown);
-      border: 1px solid #e4cdb9;
+
       padding: 7px 11px;
+
       border-radius: 999px;
+
+      background: #f3dfcf;
+      border: 1px solid #e3c6b0;
+
+      color: var(--brown-700);
+
       font-size: 10px;
       font-weight: 900;
-      text-transform: uppercase;
+
       letter-spacing: .5px;
-      margin-bottom: 14px;
-    }
-
-    .section-label {
-      color: var(--caramel);
-      font-weight: 900;
-      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
     }
 
-    h2 {
-      font-size: 29px;
-      line-height: 1.05;
-      letter-spacing: -1px;
-      color: var(--brown-dark);
-      margin-bottom: 15px;
+    .section-kicker {
+      margin-bottom: 9px;
+
+      color: var(--caramel);
+
+      font-size: 11px;
+      font-weight: 950;
+
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
     }
 
-    .section-intro {
-      font-size: 15px;
+    .section-title {
+      color: var(--brown-950);
+
+      font-size: 30px;
+      line-height: 1.02;
+
+      letter-spacing: -1.2px;
+
+      margin-bottom: 13px;
+    }
+
+    .section-text {
       color: var(--muted);
-      line-height: 1.65;
+
+      font-size: 15px;
+      line-height: 1.6;
     }
 
-    /* =========================
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255,250,245,.95);
+
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(234,216,202,.8);
+    }
+
+    .header-inner {
+      min-height: 58px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 10px 16px;
+    }
+
+    .brand {
+      color: var(--brown-900);
+
+      font-size: 13px;
+      font-weight: 950;
+
+      line-height: .95;
+
+      letter-spacing: -.4px;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--caramel);
+    }
+
+    .header-link {
+      padding: 9px 13px;
+
+      border-radius: 999px;
+
+      background: var(--brown-900);
+
+      color: white;
+
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+
+    /* =========================================================
        HERO
-    ========================= */
+    ========================================================= */
 
     .hero {
-      padding: 35px 0 30px;
+      padding:
+        30px 0
+        32px;
+
       background:
-        radial-gradient(circle at 50% 0%, #fff 0%, #fffaf4 48%, #f8eee4 100%);
+        radial-gradient(
+          circle at 50% -10%,
+          #ffffff 0%,
+          #fffaf5 48%,
+          #f7e9dd 100%
+        );
+
       text-align: center;
     }
 
-    .hero h1 {
-      font-size: 37px;
-      line-height: .98;
-      letter-spacing: -1.7px;
-      color: var(--brown-dark);
-      margin-bottom: 17px;
-      font-weight: 950;
+    .hero .eyebrow {
+      margin-bottom: 15px;
     }
 
-    .hero h1 strong {
+    .hero-title {
+      color: var(--brown-950);
+
+      font-size: 39px;
+      line-height: .96;
+
+      letter-spacing: -2px;
+
+      font-weight: 950;
+
+      margin-bottom: 17px;
+    }
+
+    .hero-title span {
       color: var(--caramel);
     }
 
     .hero-subtitle {
+      max-width: 410px;
+      margin: 0 auto 18px;
+
+      color: var(--muted);
+
       font-size: 16px;
       line-height: 1.55;
-      color: var(--muted);
-      margin-bottom: 18px;
     }
 
     .hero-subtitle strong {
-      color: var(--brown);
+      color: var(--brown-800);
     }
 
-    .category-row {
+
+    /* =========================================================
+       BENEFIT CHIPS
+    ========================================================= */
+
+    .chips {
       display: flex;
       flex-wrap: wrap;
+
       justify-content: center;
+
       gap: 7px;
-      margin-bottom: 22px;
+
+      margin-bottom: 20px;
     }
 
-    .category {
-      background: white;
-      border: 1px solid var(--border);
+    .chip {
       padding: 7px 10px;
+
       border-radius: 999px;
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      color: var(--brown-800);
+
       font-size: 10px;
       font-weight: 800;
-      color: var(--brown);
-      box-shadow: 0 4px 12px rgba(70, 35, 20, .05);
+
+      box-shadow: 0 4px 12px rgba(62,31,17,.05);
     }
 
-    .main-cta {
+
+    /* =========================================================
+       CTA
+    ========================================================= */
+
+    .cta {
       display: flex;
       align-items: center;
       justify-content: center;
+
       width: 100%;
-      min-height: 58px;
-      padding: 15px 18px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #5b3021, #3d2117);
+
+      min-height: 59px;
+
+      padding: 15px 17px;
+
+      border-radius: 15px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #613323,
+          #351b13
+        );
+
       color: white;
+
+      font-size: 15px;
       font-weight: 950;
-      font-size: 16px;
-      box-shadow: 0 13px 28px rgba(61, 33, 23, .24);
-      border: 0;
+
+      box-shadow:
+        0 15px 28px rgba(53,27,19,.22);
+
+      transition: transform .2s ease;
     }
 
-    .cta-sub {
-      margin-top: 9px;
+    .cta:active {
+      transform: scale(.98);
+    }
+
+    .cta-note {
+      margin-top: 8px;
+
+      color: #8b7569;
+
       font-size: 10px;
-      color: #8c7568;
     }
 
-    /* =========================
-       MOCKUP
-    ========================= */
 
-    .hero-product {
-      margin-top: 28px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    /* =========================================================
+       HERO IMAGE
+    ========================================================= */
 
-    .hero-mockup {
+    .hero-image {
+      margin-top: 26px;
+
       width: 100%;
-      max-width: 330px;
-      height: auto;
-      margin: 0 auto;
-      filter: drop-shadow(0 24px 30px rgba(71, 35, 23, .20));
+
+      border-radius: 20px;
+
+      overflow: hidden;
+
+      background: #f3e4d8;
+
+      box-shadow:
+        0 22px 45px rgba(64,31,17,.17);
+
+      border: 1px solid rgba(226,199,180,.7);
     }
 
-    /* =========================
-       TRUST BAR
-    ========================= */
+    .hero-image img {
+      width: 100%;
+      height: auto;
+    }
 
-    .trust-bar {
-      background: var(--brown);
+
+    /* =========================================================
+       TRUST STRIP
+    ========================================================= */
+
+    .trust {
+      padding: 15px 0;
+
+      background: var(--brown-900);
+
       color: white;
-      padding: 18px 12px;
     }
 
     .trust-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 7px;
+
+      gap: 5px;
+
       text-align: center;
     }
 
     .trust-item {
-      font-size: 10px;
-      font-weight: 800;
+      font-size: 9px;
+      font-weight: 850;
+
       line-height: 1.3;
     }
 
-    .trust-icon {
-      font-size: 20px;
-      margin-bottom: 4px;
-    }
-
-    /* =========================
-       PAIN
-    ========================= */
-
-    .pain {
-      background: white;
-    }
-
-    .pain-card {
-      margin-top: 20px;
-      background: #fff8f1;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
-    }
-
-    .pain-card p {
-      font-size: 15px;
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .pain-list {
-      list-style: none;
-    }
-
-    .pain-list li {
-      position: relative;
-      padding-left: 27px;
-      margin-bottom: 12px;
-      font-size: 14px;
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .pain-list li::before {
-      content: "×";
-      position: absolute;
-      left: 0;
-      top: -2px;
-      width: 19px;
-      height: 19px;
-      border-radius: 50%;
-      background: #ead4c4;
-      color: #7b422d;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-    }
-
-    /* =========================
-       MEANING
-    ========================= */
-
-    .meaning {
-      background: #f6eadf;
-    }
-
-    .meaning-box {
-      background: white;
-      border-radius: 20px;
-      padding: 22px;
-      border: 1px solid var(--border);
-      margin-top: 20px;
-      box-shadow: var(--shadow);
-    }
-
-    .meaning-box h3 {
-      font-size: 20px;
-      line-height: 1.15;
-      color: var(--brown);
-      margin-bottom: 11px;
-    }
-
-    .meaning-box p {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.65;
-      margin-bottom: 13px;
-    }
-
-    .meaning-highlight {
-      background: #f5e3cf;
-      border-left: 4px solid var(--caramel);
-      border-radius: 8px;
-      padding: 13px;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--brown);
-    }
-
-    .disclaimer {
-      margin-top: 14px;
-      font-size: 10px !important;
-      color: #89776c !important;
-    }
-
-    /* =========================
-       PRODUCT
-    ========================= */
-
-    .product {
-      background: white;
-    }
-
-    .product-visual {
-      margin: 22px 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .product-mini-mockup {
-      width: 78%;
-      max-width: 280px;
-      filter: drop-shadow(0 20px 28px rgba(71, 35, 23, .15));
-    }
-
-    .product-points {
-      display: grid;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .product-point {
-      display: flex;
-      align-items: flex-start;
-      gap: 11px;
-      padding: 13px;
-      background: #fffaf5;
-      border: 1px solid var(--border);
-      border-radius: 13px;
-    }
-
-    .point-icon {
-      min-width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #f1dfcd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-    }
-
-    .product-point strong {
+    .trust-item strong {
       display: block;
-      font-size: 13px;
-      color: var(--brown);
+
       margin-bottom: 2px;
+
+      color: var(--gold);
+
+      font-size: 15px;
     }
 
-    .product-point span {
-      display: block;
-      font-size: 11px;
-      color: var(--muted);
-      line-height: 1.4;
-    }
 
-    /* =========================
-       RECIPES
-    ========================= */
+    /* =========================================================
+       PROBLEM
+    ========================================================= */
 
-    .recipes {
-      background: var(--cream);
-    }
+    .problem {
+      padding: 52px 0;
 
-    .recipe-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 9px;
-      margin-top: 22px;
-    }
-
-    .recipe-card {
       background: white;
+    }
+
+    .problem-box {
+      margin-top: 21px;
+
+      padding: 21px;
+
+      border-radius: 19px;
+
+      background: #fff7ef;
+
       border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 15px 12px;
-      min-height: 108px;
-      box-shadow: 0 6px 18px rgba(70, 35, 20, .05);
     }
 
-    .recipe-number {
-      font-size: 10px;
-      color: var(--caramel);
-      font-weight: 900;
-      margin-bottom: 5px;
-    }
+    .problem-box p {
+      margin-bottom: 15px;
 
-    .recipe-card h3 {
-      font-size: 14px;
-      line-height: 1.15;
-      color: var(--brown);
-      margin-bottom: 5px;
-    }
+      color: var(--brown-800);
 
-    .recipe-card p {
-      font-size: 10px;
-      color: var(--muted);
-      line-height: 1.35;
-    }
+      font-size: 15px;
+      font-weight: 700;
 
-    /* =========================
-       BONUSES
-    ========================= */
-
-    .bonuses {
-      background: #3a2118;
-      color: white;
-    }
-
-    .bonuses h2 {
-      color: white;
-    }
-
-    .bonuses .section-intro {
-      color: #d8c5b8;
-    }
-
-    .bonus-list {
-      display: grid;
-      gap: 11px;
-      margin-top: 22px;
-    }
-
-    .bonus {
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.13);
-      border-radius: 16px;
-      padding: 17px;
-    }
-
-    .bonus-top {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      margin-bottom: 7px;
-    }
-
-    .bonus-icon {
-      width: 39px;
-      height: 39px;
-      background: #d6974e;
-      color: #3a2118;
-      border-radius: 11px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 19px;
-      flex-shrink: 0;
-    }
-
-    .bonus h3 {
-      font-size: 14px;
-      color: white;
-    }
-
-    .bonus p {
-      font-size: 11px;
-      color: #d5c3b7;
       line-height: 1.5;
     }
 
-    /* =========================
-       HOW IT WORKS
-    ========================= */
+    .problem-list {
+      list-style: none;
+    }
 
-    .how {
+    .problem-list li {
+      position: relative;
+
+      padding-left: 28px;
+
+      margin-bottom: 12px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.45;
+    }
+
+    .problem-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .problem-list li::before {
+      content: "✓";
+
+      position: absolute;
+
+      left: 0;
+      top: 0;
+
+      width: 19px;
+      height: 19px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #ead7c6;
+
+      color: var(--brown-700);
+
+      font-size: 10px;
+      font-weight: 950;
+    }
+
+
+    /* =========================================================
+       BIG STATEMENT
+    ========================================================= */
+
+    .statement {
+      padding: 48px 0;
+
+      background:
+        linear-gradient(
+          145deg,
+          #3b1e14,
+          #21100b
+        );
+
+      color: white;
+
+      text-align: center;
+    }
+
+    .statement h2 {
+      color: white;
+
+      font-size: 32px;
+      line-height: 1;
+
+      letter-spacing: -1.3px;
+
+      margin-bottom: 13px;
+    }
+
+    .statement h2 span {
+      color: var(--gold);
+    }
+
+    .statement p {
+      color: #d8c2b5;
+
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+
+    /* =========================================================
+       WHAT IS INSIDE
+    ========================================================= */
+
+    .inside {
+      padding: 53px 0;
+
+      background: var(--cream);
+    }
+
+    .inside-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 9px;
+
+      margin-top: 23px;
+    }
+
+    .inside-card {
+      min-height: 128px;
+
+      padding: 15px 13px;
+
+      border-radius: 16px;
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      box-shadow:
+        0 7px 20px rgba(60,30,18,.05);
+    }
+
+    .inside-icon {
+      font-size: 23px;
+
+      margin-bottom: 9px;
+    }
+
+    .inside-card h3 {
+      margin-bottom: 4px;
+
+      color: var(--brown-800);
+
+      font-size: 13px;
+      line-height: 1.1;
+    }
+
+    .inside-card p {
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 1.4;
+    }
+
+
+    /* =========================================================
+       RECIPE COUNT
+    ========================================================= */
+
+    .recipes {
+      padding: 52px 0;
+
       background: white;
     }
 
-    .steps {
+    .recipe-list {
+      margin-top: 23px;
+
       display: grid;
+
+      gap: 9px;
+    }
+
+    .recipe-row {
+      display: flex;
+
+      align-items: center;
+
       gap: 12px;
+
+      padding: 14px;
+
+      background: #fffaf6;
+
+      border: 1px solid var(--border);
+
+      border-radius: 15px;
+    }
+
+    .recipe-number {
+      width: 38px;
+      height: 38px;
+
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 11px;
+
+      background: var(--brown-900);
+
+      color: var(--gold);
+
+      font-size: 10px;
+      font-weight: 950;
+    }
+
+    .recipe-row h3 {
+      color: var(--brown-800);
+
+      font-size: 13px;
+
+      margin-bottom: 2px;
+    }
+
+    .recipe-row p {
+      color: var(--muted);
+
+      font-size: 10px;
+    }
+
+
+    /* =========================================================
+       BONUSES
+    ========================================================= */
+
+    .bonuses {
+      padding: 52px 0;
+
+      background: #f2e2d4;
+    }
+
+    .bonus-stack {
+      margin-top: 23px;
+
+      display: grid;
+
+      gap: 10px;
+    }
+
+    .bonus-card {
+      position: relative;
+
+      padding: 18px;
+
+      background: white;
+
+      border-radius: 17px;
+
+      border: 1px solid #e4cdbb;
+
+      box-shadow:
+        0 8px 23px rgba(67,34,20,.06);
+    }
+
+    .bonus-badge {
+      display: inline-block;
+
+      margin-bottom: 8px;
+
+      padding: 5px 8px;
+
+      border-radius: 999px;
+
+      background: #f3dfcc;
+
+      color: var(--brown-700);
+
+      font-size: 8px;
+      font-weight: 950;
+
+      text-transform: uppercase;
+    }
+
+    .bonus-card h3 {
+      color: var(--brown-900);
+
+      font-size: 15px;
+
+      margin-bottom: 5px;
+    }
+
+    .bonus-card p {
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       MEANING
+    ========================================================= */
+
+    .meaning {
+      padding: 52px 0;
+
+      background: white;
+    }
+
+    .meaning-card {
+      margin-top: 21px;
+
+      padding: 21px;
+
+      border-radius: 18px;
+
+      background: #fff8f1;
+
+      border: 1px solid var(--border);
+    }
+
+    .meaning-card h3 {
+      color: var(--brown-900);
+
+      font-size: 20px;
+
+      margin-bottom: 9px;
+    }
+
+    .meaning-card p {
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+      margin-bottom: 12px;
+    }
+
+    .meaning-highlight {
+      padding: 13px;
+
+      border-left: 4px solid var(--caramel);
+
+      border-radius: 8px;
+
+      background: #f4e2d0;
+
+      color: var(--brown-800);
+
+      font-size: 12px;
+
+      font-weight: 750;
+
+      line-height: 1.5;
+    }
+
+    .disclaimer {
+      margin-top: 13px;
+
+      color: #947f72 !important;
+
+      font-size: 9px !important;
+    }
+
+
+    /* =========================================================
+       HOW
+    ========================================================= */
+
+    .how {
+      padding: 52px 0;
+
+      background: var(--cream);
+    }
+
+    .steps {
       margin-top: 22px;
+
+      display: grid;
+
+      gap: 10px;
     }
 
     .step {
       display: flex;
-      gap: 13px;
+
+      gap: 12px;
+
       padding: 17px;
-      border-radius: 15px;
-      background: #fffaf5;
+
+      background: white;
+
+      border-radius: 16px;
+
       border: 1px solid var(--border);
     }
 
     .step-number {
-      width: 32px;
-      height: 32px;
-      min-width: 32px;
-      border-radius: 50%;
-      background: var(--brown);
-      color: white;
+      width: 34px;
+      height: 34px;
+
+      flex-shrink: 0;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 900;
-      font-size: 13px;
+
+      border-radius: 50%;
+
+      background: var(--brown-900);
+
+      color: var(--gold);
+
+      font-size: 12px;
+      font-weight: 950;
     }
 
     .step h3 {
+      color: var(--brown-800);
+
       font-size: 14px;
-      color: var(--brown);
+
       margin-bottom: 3px;
     }
 
     .step p {
-      font-size: 11px;
       color: var(--muted);
+
+      font-size: 11px;
+
       line-height: 1.45;
     }
 
-    /* =========================
-       SOCIAL PROOF PLACEHOLDER
-    ========================= */
 
-    .proof {
-      background: #f5e8dc;
+    /* =========================================================
+       TESTIMONIAL AREA
+    ========================================================= */
+
+    .social-proof {
+      padding: 52px 0;
+
+      background: white;
     }
 
-    .proof-box {
-      margin-top: 20px;
-      background: white;
-      border: 1px dashed #c9a98e;
-      border-radius: 18px;
+    .proof-card {
+      margin-top: 21px;
+
       padding: 22px;
+
+      border-radius: 19px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #fff9f3,
+          #f5e8dc
+        );
+
+      border: 1px solid var(--border);
+
       text-align: center;
     }
 
-    .proof-box .stars {
+    .stars {
+      color: #d99546;
+
       font-size: 20px;
+
       letter-spacing: 2px;
-      color: #d49745;
+
       margin-bottom: 9px;
     }
 
-    .proof-box h3 {
+    .proof-card h3 {
+      color: var(--brown-900);
+
       font-size: 18px;
-      color: var(--brown);
+
       margin-bottom: 7px;
     }
 
-    .proof-box p {
-      font-size: 12px;
+    .proof-card p {
       color: var(--muted);
-      line-height: 1.55;
+
+      font-size: 11px;
+
+      line-height: 1.5;
     }
 
-    /* =========================
+
+    /* =========================================================
        OFFER
-    ========================= */
+    ========================================================= */
 
     .offer {
+      padding: 55px 0;
+
       background:
-        radial-gradient(circle at top, #fff 0%, #f9ede1 55%, #f1dfcf 100%);
+        linear-gradient(
+          160deg,
+          #f1dfd0,
+          #fffaf5
+        );
     }
 
     .offer-card {
+      position: relative;
+
+      padding: 26px 19px;
+
       background: white;
+
       border-radius: 23px;
-      border: 1px solid var(--border);
-      padding: 25px 19px;
+
+      border: 2px solid #d9b38f;
+
+      box-shadow:
+        0 22px 50px rgba(68,34,20,.16);
+
       text-align: center;
-      box-shadow: var(--shadow);
     }
 
-    .offer-tag {
+    .offer-ribbon {
       display: inline-block;
-      background: #f0dfce;
-      color: var(--brown);
+
+      padding: 7px 12px;
+
+      margin-bottom: 13px;
+
       border-radius: 999px;
-      padding: 7px 11px;
-      font-size: 10px;
-      font-weight: 900;
+
+      background: var(--brown-900);
+
+      color: var(--gold);
+
+      font-size: 9px;
+
+      font-weight: 950;
+
+      letter-spacing: .7px;
+
       text-transform: uppercase;
-      margin-bottom: 14px;
     }
 
-    .offer-card h2 {
-      font-size: 27px;
+    .offer-title {
+      color: var(--brown-950);
+
+      font-size: 29px;
+
+      line-height: 1;
+
+      letter-spacing: -1px;
+
+      margin-bottom: 10px;
+    }
+
+    .offer-description {
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.5;
+
+      margin-bottom: 15px;
     }
 
     .old-price {
-      color: #91796b;
-      font-size: 14px;
-      margin-top: 9px;
+      color: #9a8175;
+
+      font-size: 13px;
     }
 
     .old-price span {
       text-decoration: line-through;
     }
 
-    .price {
-      color: var(--brown-dark);
-      font-weight: 950;
-      font-size: 56px;
+    .current-price {
+      margin: 2px 0 3px;
+
+      color: var(--brown-950);
+
+      font-size: 58px;
+
       line-height: 1;
+
       letter-spacing: -3px;
-      margin: 3px 0 9px;
+
+      font-weight: 950;
     }
 
-    .price small {
-      font-size: 22px;
-      vertical-align: top;
+    .current-price small {
+      font-size: 21px;
+
       letter-spacing: 0;
+
+      vertical-align: top;
     }
 
-    .price-note {
-      font-size: 11px;
+    .payment {
       color: var(--muted);
-      margin-bottom: 17px;
+
+      font-size: 10px;
+
+      margin-bottom: 18px;
     }
 
-    .offer-benefits {
-      text-align: left;
+    .offer-list {
       list-style: none;
-      margin: 18px 0;
+
+      margin: 0 0 19px;
+
+      text-align: left;
     }
 
-    .offer-benefits li {
+    .offer-list li {
       padding: 8px 0;
-      border-bottom: 1px solid #f0e4da;
+
+      border-bottom: 1px solid #f1e5dc;
+
+      color: var(--brown-800);
+
       font-size: 12px;
-      font-weight: 700;
-      color: var(--brown);
+
+      font-weight: 750;
     }
 
-    .offer-benefits li:last-child {
+    .offer-list li:last-child {
       border-bottom: 0;
     }
 
-    .offer-benefits li::before {
+    .offer-list li::before {
       content: "✓";
-      color: var(--green);
-      font-weight: 950;
+
       margin-right: 8px;
+
+      color: var(--green);
+
+      font-weight: 950;
     }
 
-    /* =========================
+    .checkout-note {
+      margin-top: 9px;
+
+      color: #917a6d;
+
+      font-size: 9px;
+    }
+
+
+    /* =========================================================
        GUARANTEE
-    ========================= */
+    ========================================================= */
 
     .guarantee {
+      padding: 42px 0;
+
       background: white;
     }
 
     .guarantee-card {
-      background: #f5efe9;
-      border: 1px solid var(--border);
+      padding: 23px 19px;
+
       border-radius: 19px;
-      padding: 23px;
+
+      background: #f5ede6;
+
+      border: 1px solid var(--border);
+
       text-align: center;
     }
 
     .guarantee-icon {
-      font-size: 38px;
-      margin-bottom: 8px;
+      font-size: 36px;
+
+      margin-bottom: 7px;
     }
 
     .guarantee-card h3 {
-      font-size: 21px;
-      color: var(--brown);
-      margin-bottom: 8px;
+      color: var(--brown-900);
+
+      font-size: 20px;
+
+      margin-bottom: 7px;
     }
 
     .guarantee-card p {
-      font-size: 12px;
       color: var(--muted);
+
+      font-size: 11px;
+
       line-height: 1.6;
     }
 
-    /* =========================
+
+    /* =========================================================
        FAQ
-    ========================= */
+    ========================================================= */
 
     .faq {
-      background: #fffaf4;
+      padding: 52px 0;
+
+      background: var(--cream);
     }
 
     .faq-list {
-      margin-top: 20px;
+      margin-top: 22px;
+
       display: grid;
+
       gap: 8px;
     }
 
     .faq-item {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 13px;
       overflow: hidden;
+
+      border-radius: 14px;
+
+      background: white;
+
+      border: 1px solid var(--border);
     }
 
     .faq-question {
       width: 100%;
+
       border: 0;
+
       background: white;
-      padding: 16px 15px;
-      text-align: left;
-      color: var(--brown);
-      font-size: 13px;
-      font-weight: 900;
+
+      color: var(--brown-800);
+
+      padding: 16px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 10px;
+
+      text-align: left;
+
+      font-size: 12px;
+
+      font-weight: 900;
+
       cursor: pointer;
     }
 
     .faq-question span {
-      font-size: 18px;
       color: var(--caramel);
-      transition: transform .2s ease;
+
+      font-size: 19px;
+
+      transition: .2s ease;
     }
 
     .faq-answer {
       display: none;
-      padding: 0 15px 16px;
+
+      padding: 0 16px 16px;
+
       color: var(--muted);
-      font-size: 12px;
+
+      font-size: 11px;
+
       line-height: 1.6;
     }
 
@@ -816,125 +1215,209 @@
       transform: rotate(45deg);
     }
 
-    /* =========================
-       FINAL CTA
-    ========================= */
+
+    /* =========================================================
+       FINAL
+    ========================================================= */
 
     .final {
-      background: var(--brown-dark);
+      padding: 57px 0 45px;
+
+      background:
+        linear-gradient(
+          150deg,
+          #31170f,
+          #1e0d08
+        );
+
       color: white;
+
       text-align: center;
-      padding: 55px 17px 45px;
+    }
+
+    .final .eyebrow {
+      background: rgba(217,154,78,.12);
+
+      border-color: rgba(217,154,78,.3);
+
+      color: var(--gold);
+
+      margin-bottom: 15px;
     }
 
     .final h2 {
       color: white;
-      font-size: 32px;
+
+      font-size: 33px;
+
+      line-height: .98;
+
+      letter-spacing: -1.4px;
+
+      margin-bottom: 13px;
+    }
+
+    .final h2 span {
+      color: var(--gold);
     }
 
     .final p {
-      color: #d9c7ba;
-      font-size: 14px;
+      color: #d6c0b3;
+
+      font-size: 13px;
+
       line-height: 1.6;
-      margin-bottom: 22px;
+
+      margin-bottom: 21px;
     }
 
-    .final .main-cta {
-      background: linear-gradient(135deg, #d99a4e, #b8783e);
-      color: #321b13;
+    .final .cta {
+      background:
+        linear-gradient(
+          135deg,
+          #e0a15a,
+          #b66e34
+        );
+
+      color: #2c140c;
+
+      box-shadow:
+        0 15px 30px rgba(0,0,0,.25);
     }
 
-    /* =========================
+
+    /* =========================================================
        FOOTER
-    ========================= */
+    ========================================================= */
 
     footer {
-      background: #24150f;
-      color: #bda99c;
+      padding: 24px 18px 30px;
+
+      background: #170a06;
+
+      color: #a98d7d;
+
       text-align: center;
-      padding: 22px 16px 90px;
+
       font-size: 9px;
+
       line-height: 1.6;
     }
 
-    /* =========================
+
+    /* =========================================================
        MOBILE FIXES
-    ========================= */
+    ========================================================= */
 
     @media (max-width: 360px) {
 
-      .hero h1 {
-        font-size: 33px;
+      .hero-title {
+        font-size: 35px;
       }
 
-      h2 {
-        font-size: 27px;
+      .section-title {
+        font-size: 28px;
       }
 
-      .hero-mockup {
-        max-width: 295px;
+      .inside-grid {
+        gap: 7px;
       }
 
-      .price {
-        font-size: 51px;
+      .inside-card {
+        padding: 13px 11px;
       }
+
+      .current-price {
+        font-size: 52px;
+      }
+
     }
 
-    /* =========================
-       FIXED CTA
-    ========================= */
 
-    .fixed-cta {
+    /* =========================================================
+       FIXED CTA
+    ========================================================= */
+
+    .mobile-cta {
       position: fixed;
-      bottom: 0;
+
       left: 0;
       right: 0;
-      z-index: 2000;
-      background: rgba(255,250,244,.97);
-      backdrop-filter: blur(10px);
-      border-top: 1px solid var(--border);
+      bottom: 0;
+
+      z-index: 3000;
+
       padding: 9px 12px;
+
+      background:
+        rgba(255,250,245,.96);
+
+      backdrop-filter: blur(12px);
+
+      border-top: 1px solid var(--border);
     }
 
-    .fixed-cta a {
+    .mobile-cta a {
       display: flex;
+
       align-items: center;
       justify-content: center;
+
       width: 100%;
-      min-height: 53px;
-      background: var(--brown);
+
+      min-height: 57px;
+
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #613323,
+          #32170f
+        );
+
       color: white;
-      border-radius: 13px;
+
       font-size: 14px;
+
       font-weight: 950;
-      box-shadow: 0 7px 18px rgba(61,33,23,.18);
+
+      box-shadow:
+        0 8px 20px rgba(53,27,19,.2);
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
 
-  <header>
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
+
+  <header class="header">
+
     <div class="header-inner">
-      <div class="logo">
+
+      <div class="brand">
         100 DOCES
         <span>SEM AÇÚCAR</span>
       </div>
 
-      <a href="#oferta" class="header-btn">
-        QUERO CONHECER
+      <a href="#oferta" class="header-link">
+        VER OFERTA
       </a>
+
     </div>
+
   </header>
 
 
-  <!-- =========================
+  <!-- =======================================================
        HERO
-  ========================= -->
+  ======================================================== -->
 
   <section class="hero">
 
@@ -944,40 +1427,65 @@
         🍫 100 RECEITAS + 5 BÔNUS
       </div>
 
-      <h1>
-        Quer cuidar da alimentação,
-        <strong>mas não quer parar de comer doce?</strong>
+
+      <h1 class="hero-title">
+
+        Quer cuidar da alimentação
+        <span>sem abandonar o doce?</span>
+
       </h1>
 
+
       <p class="hero-subtitle">
-        Tenha <strong>100 receitas de doces sem açúcar adicionado</strong>
-        para variar suas sobremesas e matar aquela vontade de doce.
+
+        Descubra <strong>100 receitas de doces sem açúcar adicionado</strong>
+        para ter mais opções de sobremesa quando aquela vontade de doce aparecer.
+
       </p>
 
-      <div class="category-row">
-        <span class="category">🍫 Chocolate</span>
-        <span class="category">🍰 Bolos</span>
-        <span class="category">🥄 Pudins</span>
-        <span class="category">🍓 Frutas</span>
-        <span class="category">🍪 Cookies</span>
-        <span class="category">🍨 Gelados</span>
+
+      <div class="chips">
+
+        <span class="chip">🍫 Chocolates</span>
+
+        <span class="chip">🍰 Bolos</span>
+
+        <span class="chip">🍮 Pudins</span>
+
+        <span class="chip">🍓 Frutas</span>
+
+        <span class="chip">🍪 Cookies</span>
+
+        <span class="chip">🍨 Gelados</span>
+
       </div>
 
-      <a href="#oferta" class="main-cta">
-        QUERO AS 100 RECEITAS →
+
+      <a
+        href="#oferta"
+        class="cta"
+      >
+        QUERO CONHECER AS 100 RECEITAS →
       </a>
 
-      <p class="cta-sub">
-        Acesso digital • Leitura pelo celular • Receba imediatamente
+
+      <p class="cta-note">
+        Produto digital • Acesso pelo celular
       </p>
 
-      <!-- IMAGEM CORRETA -->
-      <div class="hero-product">
+
+      <!--
+        ARQUIVO CORRETO:
+        capa.png
+      -->
+
+      <div class="hero-image">
+
         <img
-          src="mockup-100-doces.png"
-          alt="Livro digital 100 Doces Sem Açúcar"
-          class="hero-mockup"
+          src="./capa.png"
+          alt="100 Doces Sem Açúcar"
         >
+
       </div>
 
     </div>
@@ -985,77 +1493,82 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =======================================================
        TRUST
-  ========================= -->
+  ======================================================== -->
 
-  <div class="trust-bar">
+  <section class="trust">
 
-    <div class="trust-grid">
+    <div class="container">
 
-      <div class="trust-item">
-        <div class="trust-icon">📖</div>
-        100 RECEITAS
-      </div>
+      <div class="trust-grid">
 
-      <div class="trust-item">
-        <div class="trust-icon">🎁</div>
-        5 BÔNUS
-      </div>
+        <div class="trust-item">
+          <strong>100</strong>
+          RECEITAS
+        </div>
 
-      <div class="trust-item">
-        <div class="trust-icon">📱</div>
-        100% DIGITAL
+        <div class="trust-item">
+          <strong>5</strong>
+          BÔNUS
+        </div>
+
+        <div class="trust-item">
+          <strong>7 DIAS</strong>
+          GARANTIA*
+        </div>
+
       </div>
 
     </div>
 
-  </div>
+  </section>
 
 
-  <!-- =========================
-       PAIN
-  ========================= -->
+  <!-- =======================================================
+       PROBLEM
+  ======================================================== -->
 
-  <section class="pain">
+  <section class="problem">
 
     <div class="container">
 
-      <div class="section-label">
-        VOCÊ SE IDENTIFICA?
+      <div class="section-kicker">
+        SE VOCÊ AMA DOCE...
       </div>
 
-      <h2>
-        O problema não é gostar de doce.
+      <h2 class="section-title">
+        Você não precisa escolher entre cuidar da alimentação e ter sobremesa.
       </h2>
 
-      <p class="section-intro">
-        O difícil é querer cuidar da alimentação e, ao mesmo tempo,
-        sentir que precisa abrir mão de tudo aquilo que gosta.
+      <p class="section-text">
+        O que costuma faltar não é vontade. São opções fáceis,
+        variadas e que façam sentido para o que você está buscando.
       </p>
 
-      <div class="pain-card">
+
+      <div class="problem-box">
 
         <p>
-          Talvez você já tenha passado por situações como:
+          Sabe quando bate aquela vontade de doce e você pensa:
         </p>
 
-        <ul class="pain-list">
+        <ul class="problem-list">
 
           <li>
-            Bate aquela vontade de comer um doce depois do almoço.
+            “Queria comer alguma coisa doce agora.”
           </li>
 
           <li>
-            Você procura uma sobremesa diferente, mas encontra sempre as mesmas receitas.
+            “Não quero ficar fazendo sempre a mesma receita.”
           </li>
 
           <li>
-            Muitas receitas parecem complicadas ou exigem ingredientes difíceis.
+            “Queria uma opção sem açúcar adicionado.”
           </li>
 
           <li>
-            Você quer opções sem açúcar adicionado para variar sua rotina.
+            “Queria algo gostoso sem precisar procurar receita toda hora.”
           </li>
 
         </ul>
@@ -1067,121 +1580,153 @@
   </section>
 
 
-  <!-- =========================
-       MEANING
-  ========================= -->
+  <!-- =======================================================
+       STATEMENT
+  ======================================================== -->
 
-  <section class="meaning">
-
-    <div class="container">
-
-      <div class="section-label">
-        PRIMEIRO, UMA EXPLICAÇÃO
-      </div>
-
-      <h2>
-        Afinal, o que significa "sem açúcar"?
-      </h2>
-
-      <div class="meaning-box">
-
-        <h3>
-          Sem açúcar adicionado.
-        </h3>
-
-        <p>
-          Neste livro, "sem açúcar adicionado" significa que as receitas
-          não utilizam açúcar como ingrediente da preparação, como açúcar
-          refinado, cristal ou mascavo.
-        </p>
-
-        <div class="meaning-highlight">
-          Isso não significa que todas as receitas sejam livres de carboidratos
-          ou de açúcares naturalmente presentes nos ingredientes.
-        </div>
-
-        <p class="disclaimer">
-          Se você possui diabetes, alergias, intolerâncias ou alguma condição
-          específica de saúde, siga as orientações do profissional que acompanha
-          sua alimentação.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       PRODUCT
-  ========================= -->
-
-  <section class="product">
+  <section class="statement">
 
     <div class="container">
 
-      <div class="section-label">
-        O QUE VOCÊ RECEBE
-      </div>
-
       <h2>
-        Um livro para deixar suas sobremesas mais interessantes.
+        A ideia é simples:
+        <span>mais opções.</span>
       </h2>
 
-      <p class="section-intro">
-        Você recebe um material digital organizado para encontrar rapidamente
-        receitas de diferentes estilos.
+      <p>
+        Uma coleção de receitas para você abrir,
+        escolher e experimentar quando quiser variar suas sobremesas.
       </p>
 
-      <div class="product-visual">
+    </div>
 
-        <img
-          src="mockup-100-doces.png"
-          alt="Ebook 100 Doces Sem Açúcar"
-          class="product-mini-mockup"
-        >
+  </section>
 
+
+  <!-- =======================================================
+       INSIDE
+  ======================================================== -->
+
+  <section class="inside">
+
+    <div class="container">
+
+      <div class="section-kicker">
+        O QUE VOCÊ ENCONTRA
       </div>
 
-      <div class="product-points">
+      <h2 class="section-title">
+        Não é uma receita solta.
+        É uma coleção inteira.
+      </h2>
 
-        <div class="product-point">
+      <p class="section-text">
+        São 100 receitas organizadas em diferentes categorias
+        para você não ficar preso sempre às mesmas opções.
+      </p>
 
-          <div class="point-icon">🍫</div>
 
-          <div>
-            <strong>Receitas variadas</strong>
-            <span>
-              Chocolate, bolos, pudins, frutas, cookies, sobremesas geladas e muito mais.
-            </span>
+      <div class="inside-grid">
+
+
+        <div class="inside-card">
+
+          <div class="inside-icon">
+            🍫
           </div>
+
+          <h3>
+            Chocolate
+          </h3>
+
+          <p>
+            Opções para quem não abre mão do sabor intenso.
+          </p>
 
         </div>
 
-        <div class="product-point">
 
-          <div class="point-icon">📱</div>
+        <div class="inside-card">
 
-          <div>
-            <strong>Feito para consultar no celular</strong>
-            <span>
-              Acesse suas receitas sempre que precisar preparar uma sobremesa.
-            </span>
+          <div class="inside-icon">
+            🍰
           </div>
+
+          <h3>
+            Bolos & Brownies
+          </h3>
+
+          <p>
+            Sobremesas assadas para diferentes momentos.
+          </p>
 
         </div>
 
-        <div class="product-point">
 
-          <div class="point-icon">⚡</div>
+        <div class="inside-card">
 
-          <div>
-            <strong>Receitas práticas</strong>
-            <span>
-              Opções para diferentes momentos, inclusive quando a vontade de doce aparece de repente.
-            </span>
+          <div class="inside-icon">
+            🍮
           </div>
+
+          <h3>
+            Pudins & Cremes
+          </h3>
+
+          <p>
+            Texturas cremosas para matar a vontade.
+          </p>
+
+        </div>
+
+
+        <div class="inside-card">
+
+          <div class="inside-icon">
+            🍓
+          </div>
+
+          <h3>
+            Frutas
+          </h3>
+
+          <p>
+            Combinações diferentes para transformar frutas.
+          </p>
+
+        </div>
+
+
+        <div class="inside-card">
+
+          <div class="inside-icon">
+            🍪
+          </div>
+
+          <h3>
+            Cookies
+          </h3>
+
+          <p>
+            Doces assados para acompanhar seu café.
+          </p>
+
+        </div>
+
+
+        <div class="inside-card">
+
+          <div class="inside-icon">
+            🍨
+          </div>
+
+          <h3>
+            Gelados
+          </h3>
+
+          <p>
+            Opções refrescantes para dias quentes.
+          </p>
 
         </div>
 
@@ -1192,88 +1737,219 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =======================================================
        100 RECIPES
-  ========================= -->
+  ======================================================== -->
 
   <section class="recipes">
 
     <div class="container">
 
-      <div class="section-label">
-        DENTRO DO LIVRO
+      <div class="section-kicker">
+        100 RECEITAS
       </div>
 
-      <h2>
-        100 receitas para você variar.
+      <h2 class="section-title">
+        Uma coleção para você explorar.
       </h2>
 
-      <p class="section-intro">
-        Em vez de depender sempre da mesma sobremesa,
-        você terá diferentes categorias para explorar.
+      <p class="section-text">
+        Olha a variedade que você terá em um único material:
       </p>
 
-      <div class="recipe-grid">
 
-        <div class="recipe-card">
-          <div class="recipe-number">01–10</div>
-          <h3>🍫 Chocolate</h3>
-          <p>Brownies, trufas, brigadeiros e outras opções.</p>
+      <div class="recipe-list">
+
+
+        <div class="recipe-row">
+
+          <div class="recipe-number">
+            01
+          </div>
+
+          <div>
+            <h3>
+              Chocolate
+            </h3>
+
+            <p>
+              Brownies, trufas, brigadeiros e outras opções.
+            </p>
+          </div>
+
         </div>
 
-        <div class="recipe-card">
-          <div class="recipe-number">11–20</div>
-          <h3>🍰 Bolos</h3>
-          <p>Bolos e brownies para diferentes momentos.</p>
+
+        <div class="recipe-row">
+
+          <div class="recipe-number">
+            02
+          </div>
+
+          <div>
+            <h3>
+              Bolos & Brownies
+            </h3>
+
+            <p>
+              Receitas para preparar no forno.
+            </p>
+          </div>
+
         </div>
 
-        <div class="recipe-card">
-          <div class="recipe-number">21–30</div>
-          <h3>🥄 Mousses</h3>
-          <p>Cremes e sobremesas de colher.</p>
+
+        <div class="recipe-row">
+
+          <div class="recipe-number">
+            03
+          </div>
+
+          <div>
+            <h3>
+              Mousses & Cremes
+            </h3>
+
+            <p>
+              Sobremesas cremosas e fáceis de servir.
+            </p>
+          </div>
+
         </div>
 
-        <div class="recipe-card">
-          <div class="recipe-number">31–40</div>
-          <h3>🍮 Pudins</h3>
-          <p>Receitas cremosas e sobremesas clássicas.</p>
+
+        <div class="recipe-row">
+
+          <div class="recipe-number">
+            04
+          </div>
+
+          <div>
+            <h3>
+              Pudins
+            </h3>
+
+            <p>
+              Versões diferentes de sobremesas clássicas.
+            </p>
+          </div>
+
         </div>
 
-        <div class="recipe-card">
-          <div class="recipe-number">41–50</div>
-          <h3>🍓 Frutas</h3>
-          <p>Combinações para transformar frutas em sobremesas.</p>
+
+        <div class="recipe-row">
+
+          <div class="recipe-number">
+            05
+          </div>
+
+          <div>
+            <h3>
+              Frutas
+            </h3>
+
+            <p>
+              Sobremesas com frutas e combinações variadas.
+            </p>
+          </div>
+
         </div>
 
-        <div class="recipe-card">
-          <div class="recipe-number">51–60</div>
-          <h3>🍨 Gelados</h3>
-          <p>Opções geladas para os dias quentes.</p>
+
+        <div class="recipe-row">
+
+          <div class="recipe-number">
+            06
+          </div>
+
+          <div>
+            <h3>
+              Gelados
+            </h3>
+
+            <p>
+              Opções para deixar na geladeira ou freezer.
+            </p>
+          </div>
+
         </div>
 
-        <div class="recipe-card">
-          <div class="recipe-number">61–70</div>
-          <h3>🍪 Cookies</h3>
-          <p>Cookies e doces assados.</p>
+
+        <div class="recipe-row">
+
+          <div class="recipe-number">
+            07
+          </div>
+
+          <div>
+            <h3>
+              Cookies & Assados
+            </h3>
+
+            <p>
+              Doces para acompanhar café e lanches.
+            </p>
+          </div>
+
         </div>
 
-        <div class="recipe-card">
-          <div class="recipe-number">71–80</div>
-          <h3>⚡ Rápidos</h3>
-          <p>Receitas para quando você tem pouco tempo.</p>
+
+        <div class="recipe-row">
+
+          <div class="recipe-number">
+            08
+          </div>
+
+          <div>
+            <h3>
+              Receitas Rápidas
+            </h3>
+
+            <p>
+              Para quando a vontade chega de repente.
+            </p>
+          </div>
+
         </div>
 
-        <div class="recipe-card">
-          <div class="recipe-number">81–90</div>
-          <h3>✨ Especiais</h3>
-          <p>Sobremesas para variar o cardápio.</p>
+
+        <div class="recipe-row">
+
+          <div class="recipe-number">
+            09
+          </div>
+
+          <div>
+            <h3>
+              Sobremesas Especiais
+            </h3>
+
+            <p>
+              Mais opções para sair da rotina.
+            </p>
+          </div>
+
         </div>
 
-        <div class="recipe-card">
-          <div class="recipe-number">91–100</div>
-          <h3>❤️ Favoritos</h3>
-          <p>Mais opções para completar sua coleção.</p>
+
+        <div class="recipe-row">
+
+          <div class="recipe-number">
+            10
+          </div>
+
+          <div>
+            <h3>
+              E muito mais
+            </h3>
+
+            <p>
+              Ao todo, 100 receitas para você descobrir.
+            </p>
+          </div>
+
         </div>
+
 
       </div>
 
@@ -1282,126 +1958,118 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =======================================================
        BONUSES
-  ========================= -->
+  ======================================================== -->
 
   <section class="bonuses">
 
     <div class="container">
 
-      <div class="section-label">
-        E AINDA TEM MAIS
+      <div class="section-kicker">
+        E NÃO PARA NAS 100
       </div>
 
-      <h2>
-        5 bônus para aproveitar melhor suas receitas.
+      <h2 class="section-title">
+        Você ainda recebe 5 bônus.
       </h2>
 
-      <p class="section-intro">
-        Além das 100 receitas principais, você recebe materiais complementares.
+      <p class="section-text">
+        Materiais extras para transformar o livro em algo mais prático no dia a dia.
       </p>
 
-      <div class="bonus-list">
 
-        <div class="bonus">
+      <div class="bonus-stack">
 
-          <div class="bonus-top">
 
-            <div class="bonus-icon">⚡</div>
+        <div class="bonus-card">
 
-            <h3>
-              BÔNUS #1 — 30 DOCES EM ATÉ 10 MINUTOS
-            </h3>
+          <span class="bonus-badge">
+            BÔNUS #01
+          </span>
 
-          </div>
+          <h3>
+            30 Doces em Até 10 Minutos
+          </h3>
 
           <p>
-            Uma seleção de ideias rápidas para aqueles momentos em que a vontade
-            de doce aparece e você não quer passar muito tempo na cozinha.
+            Uma seleção de receitas rápidas para aqueles momentos
+            em que você quer um doce sem passar muito tempo na cozinha.
           </p>
 
         </div>
 
 
-        <div class="bonus">
+        <div class="bonus-card">
 
-          <div class="bonus-top">
+          <span class="bonus-badge">
+            BÔNUS #02
+          </span>
 
-            <div class="bonus-icon">🔄</div>
-
-            <h3>
-              BÔNUS #2 — GUIA DE SUBSTITUIÇÃO
-            </h3>
-
-          </div>
+          <h3>
+            Guia de Substituição
+          </h3>
 
           <p>
-            Referências práticas para entender possíveis substituições de ingredientes
-            em diferentes preparações.
+            Referências para entender possíveis substituições
+            de ingredientes nas preparações.
           </p>
 
         </div>
 
 
-        <div class="bonus">
+        <div class="bonus-card">
 
-          <div class="bonus-top">
+          <span class="bonus-badge">
+            BÔNUS #03
+          </span>
 
-            <div class="bonus-icon">🛒</div>
-
-            <h3>
-              BÔNUS #3 — LISTA DE COMPRAS
-            </h3>
-
-          </div>
+          <h3>
+            Lista de Compras Inteligente
+          </h3>
 
           <p>
-            Uma forma mais organizada de separar os ingredientes necessários
-            para suas receitas.
+            Uma maneira mais organizada de separar os ingredientes
+            necessários para suas receitas.
           </p>
 
         </div>
 
 
-        <div class="bonus">
+        <div class="bonus-card">
 
-          <div class="bonus-top">
+          <span class="bonus-badge">
+            BÔNUS #04
+          </span>
 
-            <div class="bonus-icon">📅</div>
-
-            <h3>
-              BÔNUS #4 — 7 DIAS, 7 DOCES
-            </h3>
-
-          </div>
+          <h3>
+            7 Dias, 7 Doces
+          </h3>
 
           <p>
-            Uma sugestão simples de organização para experimentar diferentes
+            Uma sugestão simples para experimentar diferentes
             receitas ao longo da semana.
           </p>
 
         </div>
 
 
-        <div class="bonus">
+        <div class="bonus-card">
 
-          <div class="bonus-top">
+          <span class="bonus-badge">
+            BÔNUS #05
+          </span>
 
-            <div class="bonus-icon">❤️</div>
-
-            <h3>
-              BÔNUS #5 — CADERNO DE FAVORITOS
-            </h3>
-
-          </div>
+          <h3>
+            Caderno de Favoritos
+          </h3>
 
           <p>
-            Um espaço para registrar quais receitas você mais gostou
-            e quer preparar novamente.
+            Um espaço para guardar as receitas que você mais gostou.
           </p>
 
         </div>
+
 
       </div>
 
@@ -1410,62 +2078,136 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =======================================================
+       MEANING
+  ======================================================== -->
+
+  <section class="meaning">
+
+    <div class="container">
+
+      <div class="section-kicker">
+        IMPORTANTE
+      </div>
+
+      <h2 class="section-title">
+        O que significa "sem açúcar adicionado"?
+      </h2>
+
+
+      <div class="meaning-card">
+
+        <h3>
+          Sem açúcar adicionado.
+        </h3>
+
+        <p>
+          As receitas do material são desenvolvidas sem utilizar
+          açúcar como ingrediente da preparação, como açúcar refinado,
+          cristal ou mascavo.
+        </p>
+
+        <div class="meaning-highlight">
+          Isso não significa que as receitas sejam livres de carboidratos
+          ou dos açúcares naturalmente presentes nos ingredientes.
+        </div>
+
+        <p class="disclaimer">
+          Pessoas com diabetes, alergias, intolerâncias ou condições
+          específicas devem seguir as orientações do profissional
+          responsável por sua alimentação.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
        HOW
-  ========================= -->
+  ======================================================== -->
 
   <section class="how">
 
     <div class="container">
 
-      <div class="section-label">
-        SIMPLES ASSIM
+      <div class="section-kicker">
+        COMO FUNCIONA
       </div>
 
-      <h2>
-        Você compra e começa a usar.
+      <h2 class="section-title">
+        Comprou. Recebeu. Escolheu a receita.
       </h2>
+
 
       <div class="steps">
 
+
         <div class="step">
 
-          <div class="step-number">1</div>
+          <div class="step-number">
+            1
+          </div>
 
           <div>
-            <h3>Faça seu pedido</h3>
+
+            <h3>
+              Faça sua compra
+            </h3>
+
             <p>
-              Clique no botão e finalize sua compra pelo checkout.
+              Clique no botão e finalize seu pedido pelo checkout.
             </p>
+
           </div>
 
         </div>
 
+
         <div class="step">
 
-          <div class="step-number">2</div>
+          <div class="step-number">
+            2
+          </div>
 
           <div>
-            <h3>Receba o acesso</h3>
+
+            <h3>
+              Receba o acesso
+            </h3>
+
             <p>
-              Após a confirmação, você recebe as instruções de acesso ao material digital.
+              Após a confirmação, siga as instruções para acessar
+              seu material digital.
             </p>
+
           </div>
 
         </div>
 
+
         <div class="step">
 
-          <div class="step-number">3</div>
+          <div class="step-number">
+            3
+          </div>
 
           <div>
-            <h3>Escolha uma receita</h3>
+
+            <h3>
+              Escolha seu próximo doce
+            </h3>
+
             <p>
-              Abra o material pelo celular, escolha uma sobremesa e coloque a receita em prática.
+              Abra pelo celular, escolha uma receita e coloque em prática.
             </p>
+
           </div>
 
         </div>
+
 
       </div>
 
@@ -1474,35 +2216,36 @@
   </section>
 
 
-  <!-- =========================
-       PROOF
-  ========================= -->
+  <!-- =======================================================
+       SOCIAL PROOF
+  ======================================================== -->
 
-  <section class="proof">
+  <section class="social-proof">
 
     <div class="container">
 
-      <div class="section-label">
-        EXPERIÊNCIA REAL
+      <div class="section-kicker">
+        PROVA SOCIAL
       </div>
 
-      <h2>
-        O que outras pessoas acharam?
+      <h2 class="section-title">
+        Aqui entram experiências reais.
       </h2>
 
-      <div class="proof-box">
+
+      <div class="proof-card">
 
         <div class="stars">
           ★★★★★
         </div>
 
         <h3>
-          Área reservada para avaliações reais
+          Depoimentos reais dos nossos clientes
         </h3>
 
         <p>
-          Assim que tivermos clientes utilizando o material, vamos inserir aqui
-          depoimentos reais, com autorização, sem inventar nomes ou resultados.
+          Esta área será preenchida conforme os primeiros compradores
+          utilizarem o produto e autorizarem seus depoimentos.
         </p>
 
       </div>
@@ -1512,84 +2255,95 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =======================================================
        OFFER
-  ========================= -->
+  ======================================================== -->
 
-  <section class="offer" id="oferta">
+  <section
+    class="offer"
+    id="oferta"
+  >
 
     <div class="container">
 
+
       <div class="offer-card">
 
-        <div class="offer-tag">
+        <div class="offer-ribbon">
           OFERTA ESPECIAL
         </div>
 
-        <h2>
+
+        <h2 class="offer-title">
           100 Doces Sem Açúcar
         </h2>
 
+
+        <p class="offer-description">
+          100 receitas + 5 bônus para quem quer ter mais opções
+          de sobremesas sem açúcar adicionado.
+        </p>
+
+
         <!--
-          IMPORTANTE:
-          Só mantenha R$89,90 como preço anterior se esse valor
-          for uma referência de preço verdadeira para o produto.
+          MANTENHA R$89,90 SOMENTE SE ESTE FOR
+          UM PREÇO DE REFERÊNCIA REAL DO PRODUTO.
         -->
 
         <div class="old-price">
-          De <span>R$89,90</span> por:
+          De <span>R$89,90</span> por apenas
         </div>
 
-        <div class="price">
+
+        <div class="current-price">
           <small>R$</small>19,90
         </div>
 
-        <p class="price-note">
-          Pagamento único • Acesso digital
-        </p>
 
-        <ul class="offer-benefits">
+        <div class="payment">
+          Pagamento único • Produto digital
+        </div>
+
+
+        <ul class="offer-list">
 
           <li>
-            Livro com 100 receitas
+            100 receitas de doces
           </li>
 
           <li>
-            30 doces rápidos
-          </li>
-
-          <li>
-            Guia de substituição
-          </li>
-
-          <li>
-            Lista de compras
-          </li>
-
-          <li>
-            7 Dias, 7 Doces
-          </li>
-
-          <li>
-            Caderno de favoritos
+            5 materiais bônus
           </li>
 
           <li>
             Acesso pelo celular
           </li>
 
+          <li>
+            Acesso imediato após confirmação
+          </li>
+
+          <li>
+            7 dias de garantia*
+          </li>
+
         </ul>
 
-        <!-- TROQUE PELO SEU CHECKOUT -->
+
+        <!--
+          TROQUE PELO LINK REAL DO CHECKOUT
+        -->
+
         <a
           href="SEU_LINK_DE_CHECKOUT_AQUI"
-          class="main-cta"
+          class="cta"
         >
-          QUERO MEU LIVRO POR R$19,90 →
+          QUERO AS 100 RECEITAS POR R$19,90 →
         </a>
 
-        <p class="cta-sub">
-          Compra segura • Acesso digital
+
+        <p class="checkout-note">
+          *Consulte as condições da garantia no checkout.
         </p>
 
       </div>
@@ -1599,9 +2353,9 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =======================================================
        GUARANTEE
-  ========================= -->
+  ======================================================== -->
 
   <section class="guarantee">
 
@@ -1618,9 +2372,10 @@
         </h3>
 
         <p>
-          Você terá o prazo de garantia informado no checkout para conhecer
-          o material. Se decidir que o produto não é para você, poderá solicitar
-          o reembolso conforme as condições apresentadas no momento da compra.
+          Você terá o prazo de garantia informado no checkout para
+          conhecer o material. Caso decida não continuar, poderá
+          solicitar o reembolso conforme as condições apresentadas
+          no momento da compra.
         </p>
 
       </div>
@@ -1630,33 +2385,41 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =======================================================
        FAQ
-  ========================= -->
+  ======================================================== -->
 
   <section class="faq">
 
     <div class="container">
 
-      <div class="section-label">
-        DÚVIDAS
+      <div class="section-kicker">
+        AINDA TEM DÚVIDAS?
       </div>
 
-      <h2>
+      <h2 class="section-title">
         Perguntas frequentes.
       </h2>
 
+
       <div class="faq-list">
 
+
         <div class="faq-item">
 
           <button class="faq-question">
-            O material é físico?
+
+            O produto é físico?
+
             <span>+</span>
+
           </button>
 
           <div class="faq-answer">
-            Não. O produto é digital e pode ser acessado pelo celular após a confirmação da compra.
+
+            Não. O produto é digital e foi pensado para ser
+            acessado pelo celular.
+
           </div>
 
         </div>
@@ -1665,13 +2428,18 @@
         <div class="faq-item">
 
           <button class="faq-question">
+
             Quantas receitas eu recebo?
+
             <span>+</span>
+
           </button>
 
           <div class="faq-answer">
-            O produto principal possui 100 receitas de doces sem açúcar adicionado,
-            além dos materiais bônus apresentados nesta página.
+
+            Você recebe 100 receitas de doces sem açúcar adicionado,
+            além dos 5 materiais bônus apresentados nesta página.
+
           </div>
 
         </div>
@@ -1680,14 +2448,20 @@
         <div class="faq-item">
 
           <button class="faq-question">
-            As receitas são para emagrecer?
+
+            "Sem açúcar" significa sem carboidrato?
+
             <span>+</span>
+
           </button>
 
           <div class="faq-answer">
-            O material não promete emagrecimento. A proposta é oferecer opções
-            de sobremesas sem açúcar adicionado para pessoas que estão cuidando
-            da alimentação e querem variar suas opções de doce.
+
+            Não. "Sem açúcar adicionado" significa que açúcar
+            não é utilizado como ingrediente da preparação.
+            Alguns ingredientes naturalmente possuem açúcares
+            e carboidratos.
+
           </div>
 
         </div>
@@ -1696,14 +2470,19 @@
         <div class="faq-item">
 
           <button class="faq-question">
-            "Sem açúcar" significa sem carboidratos?
+
+            As receitas prometem emagrecimento?
+
             <span>+</span>
+
           </button>
 
           <div class="faq-answer">
-            Não. "Sem açúcar adicionado" significa que açúcar não é utilizado
-            como ingrediente da preparação. Alguns ingredientes naturalmente
-            possuem açúcares ou carboidratos.
+
+            Não. O material não promete emagrecimento.
+            A proposta é oferecer opções de sobremesas sem
+            açúcar adicionado para quem está cuidando da alimentação.
+
           </div>
 
         </div>
@@ -1712,13 +2491,18 @@
         <div class="faq-item">
 
           <button class="faq-question">
+
             Posso acessar pelo celular?
+
             <span>+</span>
+
           </button>
 
           <div class="faq-answer">
-            Sim. O material é digital e foi pensado para ser consultado facilmente
+
+            Sim. O material é digital e pode ser consultado
             pelo celular.
+
           </div>
 
         </div>
@@ -1727,16 +2511,23 @@
         <div class="faq-item">
 
           <button class="faq-question">
-            Como recebo o produto?
+
+            Como recebo meu acesso?
+
             <span>+</span>
+
           </button>
 
           <div class="faq-answer">
-            Após a confirmação do pagamento, o acesso é disponibilizado conforme
-            as instruções apresentadas no checkout.
+
+            Após a confirmação do pagamento, você recebe as
+            instruções de acesso conforme as condições apresentadas
+            no checkout.
+
           </div>
 
         </div>
+
 
       </div>
 
@@ -1745,32 +2536,36 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =======================================================
        FINAL CTA
-  ========================= -->
+  ======================================================== -->
 
   <section class="final">
 
     <div class="container">
 
       <div class="eyebrow">
-        🍫 SUA VONTADE DE DOCE TEM OPÇÕES
+        🍫 100 DOCES SEM AÇÚCAR
       </div>
 
+
       <h2>
-        100 receitas para você descobrir novas sobremesas.
+        Sua vontade de doce não precisa significar
+        <span>ficar sem opções.</span>
       </h2>
 
+
       <p>
-        Tenha uma coleção de receitas sem açúcar adicionado
-        para consultar sempre que quiser preparar um doce diferente.
+        Tenha uma coleção com 100 receitas para consultar
+        sempre que quiser experimentar uma sobremesa diferente.
       </p>
 
+
       <a
-        href="SEU_LINK_DE_CHECKOUT_AQUI"
-        class="main-cta"
+        href="#oferta"
+        class="cta"
       >
-        QUERO AS 100 RECEITAS →
+        QUERO CONHECER AS 100 RECEITAS →
       </a>
 
     </div>
@@ -1778,9 +2573,9 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =======================================================
        FOOTER
-  ========================= -->
+  ======================================================== -->
 
   <footer>
 
@@ -1789,47 +2584,51 @@
     </p>
 
     <p>
-      Este material é destinado a fins culinários e informativos.
+      Material digital de caráter culinário e informativo.
       Não substitui orientação médica ou nutricional.
     </p>
 
   </footer>
 
 
-  <!-- =========================
-       FIXED CTA MOBILE
-  ========================= -->
+  <!-- =======================================================
+       FIXED MOBILE CTA
+  ======================================================== -->
 
-  <div class="fixed-cta">
+  <div class="mobile-cta">
 
     <a href="#oferta">
-      QUERO CONHECER — R$19,90 →
+      QUERO AS 100 RECEITAS — R$19,90 →
     </a>
 
   </div>
 
 
-  <!-- =========================
-       FAQ SCRIPT
-  ========================= -->
+  <!-- =======================================================
+       FAQ JS
+  ======================================================== -->
 
   <script>
 
-    const faqQuestions = document.querySelectorAll(".faq-question");
+    const questions =
+      document.querySelectorAll(".faq-question");
 
-    faqQuestions.forEach(function(question) {
+    questions.forEach((question) => {
 
-      question.addEventListener("click", function() {
+      question.addEventListener("click", () => {
 
-        const item = question.parentElement;
+        const item =
+          question.closest(".faq-item");
 
-        document.querySelectorAll(".faq-item").forEach(function(otherItem) {
+        document
+          .querySelectorAll(".faq-item")
+          .forEach((other) => {
 
-          if (otherItem !== item) {
-            otherItem.classList.remove("active");
-          }
+            if (other !== item) {
+              other.classList.remove("active");
+            }
 
-        });
+          });
 
         item.classList.toggle("active");
 
@@ -1838,6 +2637,7 @@
     });
 
   </script>
+
 
 </body>
 </html>
