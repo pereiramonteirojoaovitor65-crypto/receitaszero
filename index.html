@@ -1,10 +1,20 @@
 ```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#4b2c21">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <meta
+    name="theme-color"
+    content="#4b2c21"
+  >
 
   <title>100 Doces Sem Açúcar | Receitas Deliciosas</title>
 
@@ -14,6 +24,10 @@
   >
 
   <style>
+
+    /* =====================================================
+       RESET
+    ===================================================== */
 
     *{
       margin:0;
@@ -39,50 +53,17 @@
       color:#3d251c;
       line-height:1.6;
       overflow-x:hidden;
-    }
-
-    @keyframes offerPulse{
-      0%,100%{
-        transform:scale(1);
-        box-shadow:0 0 0 0 rgba(255,196,120,.20);
-      }
-
-      50%{
-        transform:scale(1.025);
-        box-shadow:0 0 0 8px rgba(255,196,120,0);
-      }
-    }
-
-    @keyframes ctaPulse{
-      0%,100%{
-        transform:translateY(0);
-        box-shadow:0 14px 30px rgba(255,190,110,.20);
-      }
-
-      50%{
-        transform:translateY(-2px);
-        box-shadow:0 18px 34px rgba(255,190,110,.30);
-      }
-    }
-
-    @keyframes priceGlow{
-      0%,100%{
-        text-shadow:0 0 0 rgba(255,255,255,0);
-      }
-
-      50%{
-        text-shadow:0 0 18px rgba(255,255,255,.16);
-      }
+      -webkit-font-smoothing:antialiased;
     }
 
     img{
-      max-width:100%;
       display:block;
+      max-width:100%;
     }
 
     a{
-      text-decoration:none;
       color:inherit;
+      text-decoration:none;
     }
 
     button{
@@ -91,40 +72,101 @@
 
     .container{
       width:min(1120px,calc(100% - 28px));
-      margin:0 auto;
+      margin:auto;
     }
 
     .section{
-      padding:64px 0;
+      padding:58px 0;
     }
 
-    .section-light{
-      background:#fff;
+
+    /* =====================================================
+       ANIMAÇÕES
+    ===================================================== */
+
+    @keyframes offerPulse{
+
+      0%,100%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(255,191,105,.24);
+      }
+
+      50%{
+        transform:scale(1.025);
+        box-shadow:0 0 0 8px rgba(255,191,105,0);
+      }
+
     }
+
+    @keyframes ctaPulse{
+
+      0%,100%{
+        transform:translateY(0);
+        box-shadow:0 12px 28px rgba(255,187,105,.22);
+      }
+
+      50%{
+        transform:translateY(-2px);
+        box-shadow:0 17px 34px rgba(255,187,105,.34);
+      }
+
+    }
+
+    @keyframes priceGlow{
+
+      0%,100%{
+        text-shadow:0 0 0 rgba(255,255,255,0);
+      }
+
+      50%{
+        text-shadow:0 0 20px rgba(255,255,255,.16);
+      }
+
+    }
+
+    @media(prefers-reduced-motion:reduce){
+
+      *,
+      *::before,
+      *::after{
+        animation:none!important;
+        scroll-behavior:auto!important;
+      }
+
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
 
     header{
       position:sticky;
       top:0;
       z-index:1000;
-      background:rgba(255,250,243,.97);
+
+      background:rgba(255,250,243,.96);
       backdrop-filter:blur(14px);
+
       border-bottom:1px solid rgba(90,52,34,.08);
     }
 
     .header-inner{
-      min-height:60px;
+      min-height:58px;
+
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:12px;
+
+      gap:10px;
     }
 
     .logo{
-      font-weight:900;
-      font-size:14px;
+      font-size:13px;
+      line-height:1.05;
+      font-weight:950;
       letter-spacing:-.35px;
       color:#4a281c;
-      line-height:1.1;
     }
 
     .logo span{
@@ -136,16 +178,21 @@
       align-items:center;
       justify-content:center;
       gap:5px;
-      background:transparent;
-      color:#6d3a25;
+
+      padding:7px 10px;
+
       border:1px solid rgba(143,78,44,.20);
       border-radius:999px;
-      padding:7px 10px;
+
+      color:#6d3a25;
+      background:transparent;
+
       font-size:9px;
-      font-weight:800;
-      letter-spacing:.04em;
+      font-weight:850;
+      letter-spacing:.03em;
       white-space:nowrap;
-      transition:background .2s ease,border-color .2s ease,transform .2s ease;
+
+      transition:.2s ease;
     }
 
     .header-book-button span{
@@ -155,22 +202,29 @@
 
     .header-book-button:hover{
       background:#fff;
-      border-color:rgba(143,78,44,.32);
+      border-color:rgba(143,78,44,.35);
     }
 
-    .header-book-button:active{
-      transform:scale(.98);
-    }
+
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero{
-      padding:38px 0 46px;
-      background:radial-gradient(circle at 90% 5%,rgba(220,171,125,.22),transparent 38%);
+      padding:34px 0 42px;
+
+      background:
+        radial-gradient(
+          circle at 90% 5%,
+          rgba(220,171,125,.22),
+          transparent 38%
+        );
     }
 
     .hero-grid{
       display:flex;
       flex-direction:column;
-      gap:28px;
+      gap:24px;
     }
 
     .hero-copy{
@@ -180,25 +234,32 @@
     .eyebrow{
       display:inline-flex;
       align-items:center;
-      gap:7px;
+      gap:6px;
+
       padding:7px 11px;
+      margin-bottom:14px;
+
       border-radius:999px;
+
       background:#f1dfcf;
       color:#794326;
+
       font-size:10px;
       font-weight:900;
+      letter-spacing:.4px;
       text-transform:uppercase;
-      letter-spacing:.45px;
-      margin-bottom:16px;
     }
 
     .hero h1{
+      max-width:700px;
+
+      margin-bottom:15px;
+
+      color:#3d241b;
+
       font-size:clamp(38px,11vw,58px);
       line-height:1.01;
       letter-spacing:-2.2px;
-      color:#3d241b;
-      margin-bottom:17px;
-      max-width:700px;
     }
 
     .hero h1 strong{
@@ -206,10 +267,11 @@
     }
 
     .hero-subtitle{
-      font-size:16px;
-      color:#70594d;
-      margin-bottom:20px;
       max-width:650px;
+      margin-bottom:18px;
+
+      color:#70594d;
+      font-size:16px;
     }
 
     .hero-subtitle strong{
@@ -218,11 +280,12 @@
 
     .category-pills{
       display:flex;
-      flex-wrap:nowrap;
-      overflow-x:auto;
-      gap:8px;
-      margin:0 -14px 22px;
+      gap:7px;
+
+      margin:0 -14px 19px;
       padding:0 14px 4px;
+
+      overflow-x:auto;
       scrollbar-width:none;
     }
 
@@ -232,37 +295,49 @@
 
     .pill{
       flex:0 0 auto;
-      padding:7px 11px;
+
+      padding:6px 10px;
+
       background:#fff;
       border:1px solid #ead9cc;
       border-radius:999px;
-      font-size:11px;
-      font-weight:700;
+
       color:#63483b;
+
+      font-size:10px;
+      font-weight:750;
     }
 
     .hero-note{
-      margin-top:11px;
-      font-size:11px;
+      margin-top:8px;
+
       color:#8a766c;
+      font-size:11px;
     }
 
     .hero-product{
       order:2;
-      display:flex;
-      justify-content:center;
-      align-items:center;
+
       width:100%;
-      padding:0 4px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      padding:0 3px;
     }
 
     .hero-mockup{
       width:min(100%,540px);
       height:auto;
-      filter:drop-shadow(0 25px 32px rgba(71,35,23,.19));
+
+      filter:
+        drop-shadow(
+          0 24px 30px rgba(71,35,23,.18)
+        );
     }
 
-    @media (max-width:759px){
+    @media(max-width:759px){
 
       .hero-copy{
         display:contents;
@@ -294,8 +369,14 @@
 
     }
 
+
+    /* =====================================================
+       TRUST BAR
+    ===================================================== */
+
     .trust-bar{
-      padding:16px 0;
+      padding:14px 0;
+
       background:#4b2c21;
       color:#fff;
     }
@@ -303,111 +384,145 @@
     .trust-grid{
       display:grid;
       grid-template-columns:1fr;
-      gap:8px;
+      gap:6px;
+
       text-align:center;
     }
 
     .trust-item{
-      font-size:12px;
-      font-weight:800;
-      opacity:.96;
+      font-size:11px;
+      font-weight:850;
     }
+
+
+    /* =====================================================
+       TÍTULOS
+    ===================================================== */
 
     .section-title{
       max-width:760px;
-      margin:0 auto 34px;
+      margin:0 auto 30px;
+
       text-align:center;
     }
 
     .section-title .mini{
       display:block;
+
+      margin-bottom:7px;
+
       color:#a45c35;
-      font-size:11px;
+
+      font-size:10px;
       font-weight:900;
-      text-transform:uppercase;
       letter-spacing:1px;
-      margin-bottom:8px;
+      text-transform:uppercase;
     }
 
     .section-title h2{
-      font-size:clamp(30px,8vw,46px);
+      margin-bottom:10px;
+
+      color:#40261c;
+
+      font-size:clamp(29px,8vw,46px);
       line-height:1.08;
       letter-spacing:-1.45px;
-      color:#40261c;
-      margin-bottom:12px;
     }
 
     .section-title p{
       color:#766157;
-      font-size:15px;
+      font-size:14px;
     }
+
+
+    /* =====================================================
+       PROBLEMA
+    ===================================================== */
 
     .pain-grid{
       display:grid;
       grid-template-columns:1fr;
-      gap:12px;
+      gap:11px;
     }
 
     .pain-card{
-      padding:21px;
-      border-radius:16px;
+      padding:20px;
+
       background:#fffaf5;
       border:1px solid #edddd1;
+      border-radius:16px;
     }
 
     .pain-icon{
-      font-size:25px;
-      margin-bottom:9px;
+      margin-bottom:8px;
+      font-size:24px;
     }
 
     .pain-card h3{
-      font-size:17px;
-      margin-bottom:6px;
+      margin-bottom:5px;
+
       color:#4a2c20;
+      font-size:16px;
     }
 
     .pain-card p{
-      font-size:13px;
       color:#766157;
+      font-size:13px;
     }
+
+
+    /* =====================================================
+       RECEITAS
+    ===================================================== */
 
     .recipe-grid{
       display:grid;
       grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:10px;
+      gap:9px;
     }
 
     .recipe-card{
-      padding:17px 10px;
+      min-height:104px;
+
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+
+      padding:15px 9px;
+
       background:#fff;
       border:1px solid #eadbd0;
       border-radius:14px;
+
       text-align:center;
-      min-height:108px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
     }
 
     .recipe-card .emoji{
       display:block;
-      font-size:25px;
-      margin-bottom:6px;
+
+      margin-bottom:5px;
+
+      font-size:24px;
     }
 
     .recipe-card strong{
-      display:block;
-      font-size:13px;
       color:#4c3024;
-      line-height:1.25;
+      font-size:12px;
+      line-height:1.2;
     }
 
     .recipe-card span{
-      display:block;
-      font-size:11px;
-      color:#8a756a;
       margin-top:3px;
+
+      color:#8a756a;
+      font-size:10px;
     }
+
+
+    /* =====================================================
+       BÔNUS
+    ===================================================== */
 
     .bonus-section{
       background:#f7ede4;
@@ -416,7 +531,9 @@
     .bonus-showcase{
       width:100%;
       max-width:920px;
-      margin:4px auto 34px;
+
+      margin:0 auto 30px;
+
       display:flex;
       justify-content:center;
     }
@@ -424,264 +541,395 @@
     .bonus-mockup{
       width:100%;
       height:auto;
-      border-radius:18px;
-      box-shadow:0 18px 45px rgba(70,35,20,.16);
-      object-fit:contain;
+
+      border-radius:17px;
+
+      box-shadow:
+        0 18px 42px rgba(70,35,20,.15);
     }
 
     .bonus-grid{
       display:grid;
       grid-template-columns:1fr;
-      gap:11px;
+      gap:10px;
     }
 
     .bonus{
-      position:relative;
-      padding:20px;
+      padding:19px;
+
       background:#fff;
-      border-radius:16px;
       border:1px solid #e9d8cb;
-      min-height:0;
+      border-radius:16px;
     }
 
     .bonus-number{
+      width:31px;
+      height:31px;
+
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      width:32px;
-      height:32px;
-      border-radius:9px;
+
+      margin-bottom:10px;
+
       background:#8f4e2c;
+      border-radius:9px;
+
       color:#fff;
-      font-size:12px;
+      font-size:11px;
       font-weight:900;
-      margin-bottom:11px;
     }
 
     .bonus h3{
-      font-size:16px;
+      margin-bottom:6px;
+
+      color:#432a20;
+      font-size:15px;
       line-height:1.25;
-      margin-bottom:7px;
     }
 
     .bonus p{
-      font-size:13px;
       color:#776258;
+      font-size:12.5px;
     }
 
+
     /* =====================================================
-       OFERTA — BLOCO PRINCIPAL
-       ===================================================== */
+       OFERTA
+    ===================================================== */
 
     .offer-section{
-      background:linear-gradient(145deg,#4b2b20,#70412b);
+      position:relative;
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(255,197,135,.12),
+          transparent 45%
+        ),
+        linear-gradient(
+          145deg,
+          #43261c,
+          #70412b
+        );
+
       color:#fff;
     }
 
     .offer-card{
-      max-width:720px;
-      margin:0 auto;
+      max-width:700px;
+      margin:auto;
+
+      padding:34px 17px;
+
       text-align:center;
-      padding:36px 18px;
+
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(255,255,255,.11);
       border-radius:21px;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
+
+      box-shadow:
+        0 20px 55px rgba(0,0,0,.10);
     }
 
     .offer-card .mini{
-      font-size:11px;
+      margin-bottom:9px;
+
+      color:#e9c5a8;
+
+      font-size:10px;
       font-weight:900;
       letter-spacing:1px;
       text-transform:uppercase;
-      color:#e9c5a8;
-      margin-bottom:10px;
     }
 
     .offer-card h2{
-      font-size:clamp(30px,8vw,48px);
+      max-width:600px;
+      margin:0 auto 11px;
+
+      font-size:clamp(28px,8vw,47px);
       line-height:1.05;
       letter-spacing:-1.6px;
-      margin-bottom:13px;
     }
 
     .offer-description{
-      max-width:550px;
-      margin:0 auto 22px;
+      max-width:530px;
+      margin:0 auto 19px;
+
       color:#eadfd9;
-      font-size:14px;
+      font-size:13px;
     }
 
-    /* BALÃO DE OFERTA */
+
+    /* =====================================================
+       BALÃO ANIMADO
+    ===================================================== */
 
     .offer-urgency{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:6px;
-      margin:0 auto 16px;
-      padding:9px 15px;
+      gap:7px;
+
+      margin:0 auto 15px;
+      padding:9px 14px;
+
+      background:#fff0dd;
+      border:1px solid rgba(255,205,145,.60);
       border-radius:999px;
-      background:#fff1df;
-      color:#8a4d14;
-      border:1px solid rgba(255,201,132,.55);
-      font-size:11px;
+
+      color:#874912;
+
+      font-size:10px;
       font-weight:950;
-      letter-spacing:.65px;
+      letter-spacing:.6px;
       text-transform:uppercase;
-      text-align:center;
-      animation:offerPulse 2.4s ease-in-out infinite;
+
+      animation:offerPulse 2.5s ease-in-out infinite;
     }
 
     .offer-urgency::before{
       content:"";
+
       width:7px;
       height:7px;
-      border-radius:50%;
-      background:#d96b2b;
-      box-shadow:0 0 0 4px rgba(217,107,43,.12);
+
       flex:0 0 auto;
+
+      background:#d86c2c;
+      border-radius:50%;
+
+      box-shadow:
+        0 0 0 4px rgba(216,108,44,.12);
     }
 
-    /* PREÇO */
+
+    /* =====================================================
+       PREÇO
+    ===================================================== */
 
     .price-label{
-      font-size:12px;
-      font-weight:850;
-      color:#eadbd3;
-      margin-bottom:5px;
+      margin-bottom:1px;
+
+      color:#e9d9d1;
+
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.25px;
       text-transform:uppercase;
-      letter-spacing:.3px;
     }
 
     .old-price{
+      margin:0 4px;
+
+      opacity:.62;
+
       text-decoration:line-through;
       text-decoration-thickness:2px;
-      margin:0 5px;
-      opacity:.62;
     }
 
     .price{
-      display:inline-block;
-      font-size:clamp(68px,15vw,88px);
-      line-height:.92;
-      font-weight:950;
-      letter-spacing:-4px;
-      margin-bottom:13px;
+      display:block;
+
+      margin:1px 0 9px;
+
       color:#fff;
+
+      font-size:clamp(70px,18vw,94px);
+      font-weight:950;
+      line-height:.88;
+      letter-spacing:-5px;
+
       animation:priceGlow 2.8s ease-in-out infinite;
     }
 
     .price small{
-      font-size:22px;
-      vertical-align:top;
       position:relative;
-      top:8px;
+      top:-3px;
+
       margin-right:2px;
+
+      font-size:22px;
       letter-spacing:-1px;
+      vertical-align:top;
     }
 
     .price-saving{
-      margin:-2px 0 23px;
-      font-size:13px;
-      font-weight:750;
-      letter-spacing:.01em;
-      opacity:.92;
+      margin-bottom:20px;
+
+      color:#eadfd9;
+
+      font-size:12px;
+      line-height:1.45;
     }
 
     .price-saving strong{
-      display:inline-block;
-      margin-bottom:3px;
+      display:block;
+
+      margin-bottom:2px;
+
       color:#fff;
+
+      font-size:13px;
     }
 
-    /* BOTÃO PRINCIPAL */
+
+    /* =====================================================
+       CTA PRINCIPAL
+    ===================================================== */
+
+    .offer-button,
+    .hero-button{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      min-height:58px;
+
+      border-radius:13px;
+
+      text-align:center;
+
+      font-size:15px;
+      font-weight:950;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+    }
 
     .offer-button{
       width:100%;
-      min-height:62px;
-      background:linear-gradient(180deg,#fffdf9 0%,#ffe9d2 100%);
+
+      background:
+        linear-gradient(
+          180deg,
+          #fffdf9 0%,
+          #ffe7cc 100%
+        );
+
+      border:1px solid rgba(255,255,255,.60);
+
       color:#6e3922;
-      border:1px solid rgba(255,255,255,.55);
-      box-shadow:0 14px 30px rgba(0,0,0,.18);
-      font-size:16px;
-      letter-spacing:.15px;
-      animation:ctaPulse 2.2s ease-in-out infinite;
+
+      box-shadow:
+        0 13px 30px rgba(0,0,0,.19);
+
+      animation:ctaPulse 2.3s ease-in-out infinite;
     }
 
     .offer-button:hover{
       transform:translateY(-3px);
-      box-shadow:0 20px 38px rgba(0,0,0,.22);
+
+      filter:brightness(1.02);
+
+      box-shadow:
+        0 20px 40px rgba(0,0,0,.24);
+    }
+
+    .offer-button:active{
+      transform:scale(.985);
+      animation:none;
     }
 
     .offer-details{
-      margin-top:12px;
-      font-size:11px;
+      margin-top:10px;
+
       color:#d7c6bd;
+
+      font-size:10px;
     }
 
+
+    /* =====================================================
+       GARANTIA
+    ===================================================== */
+
     .guarantee{
-      margin-top:25px;
-      padding:20px;
-      border-radius:15px;
-      background:rgba(255,255,255,.07);
+      margin-top:22px;
+      padding:18px;
+
+      background:rgba(255,255,255,.065);
       border:1px solid rgba(255,255,255,.10);
+      border-radius:15px;
     }
 
     .guarantee h3{
-      margin-bottom:6px;
-      font-size:16px;
+      margin-bottom:5px;
+      font-size:15px;
     }
 
     .guarantee p{
-      font-size:12px;
       color:#e0d0c8;
+      font-size:11.5px;
+      line-height:1.5;
     }
 
+
+    /* =====================================================
+       DECISÃO
+    ===================================================== */
+
     .decision-grid{
+      max-width:760px;
+      margin:0 auto 21px;
+
       display:grid;
       grid-template-columns:1fr;
-      gap:11px;
-      max-width:760px;
-      margin:0 auto 24px;
+      gap:10px;
     }
 
     .decision-card{
-      padding:20px 18px;
+      padding:19px 17px;
+
       background:#fff;
       border:1px solid #eadbd0;
       border-radius:16px;
-      box-shadow:0 8px 22px rgba(70,35,20,.05);
+
+      box-shadow:
+        0 7px 20px rgba(70,35,20,.045);
     }
 
     .decision-card .icon{
-      font-size:24px;
       display:block;
-      margin-bottom:8px;
+
+      margin-bottom:7px;
+
+      font-size:23px;
     }
 
     .decision-card h3{
-      font-size:16px;
-      line-height:1.25;
-      margin-bottom:5px;
+      margin-bottom:4px;
+
       color:#4a2c20;
+      font-size:15px;
+      line-height:1.25;
     }
 
     .decision-card p{
-      font-size:13px;
       color:#766157;
+      font-size:12.5px;
       line-height:1.5;
     }
 
     .decision-note{
-      text-align:center;
-      font-size:11px;
+      margin-top:9px;
+
       color:#8a766c;
-      margin-top:10px;
+
+      font-size:10px;
+      text-align:center;
     }
+
+
+    /* =====================================================
+       FAQ
+    ===================================================== */
 
     .faq{
       max-width:820px;
-      margin:0 auto;
+      margin:auto;
     }
 
     .faq-item{
@@ -690,17 +938,22 @@
 
     .faq-question{
       width:100%;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+
+      padding:17px 0;
+
       border:0;
       background:transparent;
-      padding:18px 0;
-      text-align:left;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:15px;
+
       color:#472c21;
-      font-size:14px;
+
+      font-size:13px;
       font-weight:850;
+
       cursor:pointer;
       list-style:none;
     }
@@ -710,118 +963,123 @@
     }
 
     .faq-question span:last-child{
-      font-size:21px;
-      transition:transform .2s;
       flex:0 0 auto;
+
+      font-size:20px;
+
+      transition:transform .2s;
     }
 
-    .faq-answer{
-      padding:0 0 18px;
-      color:#756157;
-      font-size:13px;
-    }
-
-    .faq-item[open] .faq-question span:last-child{
+    .faq-item[open]
+    .faq-question span:last-child{
       transform:rotate(45deg);
     }
 
+    .faq-answer{
+      padding:0 0 17px;
+
+      color:#756157;
+
+      font-size:12.5px;
+      line-height:1.55;
+    }
+
+
+    /* =====================================================
+       CTA FINAL
+    ===================================================== */
+
     .final-cta{
-      padding:62px 0;
+      padding:58px 0;
+
       background:#f4e7dc;
+
       text-align:center;
     }
 
     .final-cta h2{
       max-width:760px;
-      margin:0 auto 13px;
-      font-size:clamp(30px,8vw,48px);
+      margin:0 auto 11px;
+
+      color:#40261c;
+
+      font-size:clamp(29px,8vw,47px);
       line-height:1.08;
-      letter-spacing:-1.6px;
+      letter-spacing:-1.5px;
     }
 
     .final-cta p{
       max-width:620px;
-      margin:0 auto 22px;
+      margin:0 auto 20px;
+
       color:#766157;
-      font-size:14px;
+      font-size:13px;
     }
 
-    .final-cta .hero-button{
+    .hero-button{
       max-width:520px;
-      margin:0 auto;
-    }
+      margin:auto;
 
-    .hero-button,
-    .offer-button{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:54px;
-      border-radius:13px;
       background:#8f4e2c;
       color:#fff;
-      font-size:15px;
-      font-weight:900;
-      box-shadow:0 13px 28px rgba(143,78,44,.20);
-      transition:.2s;
-      text-align:center;
+
+      box-shadow:
+        0 13px 28px rgba(143,78,44,.20);
     }
 
-    .hero-button:active,
-    .offer-button:active{
-      transform:scale(.985);
-      animation:none;
+    .hero-button:hover{
+      transform:translateY(-2px);
+
+      box-shadow:
+        0 18px 32px rgba(143,78,44,.25);
     }
 
-    @media (prefers-reduced-motion:reduce){
 
-      .offer-urgency,
-      .price,
-      .offer-button{
-        animation:none;
-      }
-
-    }
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     footer{
-      padding:28px 0 30px;
+      padding:26px 0 29px;
+
       background:#3e251c;
       color:#d9c9c0;
+
+      font-size:10px;
       text-align:center;
-      font-size:11px;
     }
 
     footer strong{
       color:#fff;
     }
 
-    @media (min-width:760px){
+
+    /* =====================================================
+       DESKTOP
+    ===================================================== */
+
+    @media(min-width:760px){
 
       .container{
         width:min(1120px,calc(100% - 40px));
       }
 
       .section{
-        padding:82px 0;
+        padding:78px 0;
       }
 
       .hero{
-        padding:68px 0 78px;
+        padding:64px 0 74px;
       }
 
       .hero-grid{
         display:grid;
+
         grid-template-columns:1fr 1fr;
+
         align-items:center;
+
         gap:55px;
-      }
-
-      .hero-copy{
-        text-align:left;
-      }
-
-      .hero-product{
-        order:2;
       }
 
       .hero h1{
@@ -834,9 +1092,11 @@
 
       .category-pills{
         flex-wrap:wrap;
-        overflow:visible;
-        margin:0 0 26px;
+
+        margin:0 0 24px;
         padding:0;
+
+        overflow:visible;
       }
 
       .trust-grid{
@@ -846,86 +1106,146 @@
 
       .pain-grid{
         grid-template-columns:repeat(3,1fr);
-        gap:18px;
+        gap:17px;
       }
 
       .recipe-grid{
         grid-template-columns:repeat(5,1fr);
-        gap:14px;
-      }
-
-      .bonus-showcase{
-        margin-bottom:42px;
+        gap:13px;
       }
 
       .bonus-grid{
         grid-template-columns:repeat(5,1fr);
-        gap:16px;
+        gap:15px;
+      }
+
+      .bonus-showcase{
+        margin-bottom:40px;
       }
 
       .offer-card{
-        padding:52px 30px;
+        padding:48px 30px;
       }
 
       .offer-button{
-        width:min(100%,420px);
-        margin:0 auto;
+        width:min(100%,430px);
+        margin:auto;
+      }
+
+      .decision-grid{
+        grid-template-columns:1fr 1fr;
       }
 
     }
 
   </style>
 
-  <!-- Meta Pixel Code -->
+
+  <!-- META PIXEL -->
+
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1097307739687772');
-  fbq('track', 'PageView');
+
+    !function(f,b,e,v,n,t,s)
+    {
+      if(f.fbq)return;
+
+      n=f.fbq=function(){
+        n.callMethod?
+        n.callMethod.apply(n,arguments):
+        n.queue.push(arguments)
+      };
+
+      if(!f._fbq)f._fbq=n;
+
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+
+      s=b.getElementsByTagName(e)[0];
+
+      s.parentNode.insertBefore(t,s)
+
+    }(
+      window,
+      document,
+      'script',
+      'https://connect.facebook.net/en_US/fbevents.js'
+    );
+
+    fbq(
+      'init',
+      '1097307739687772'
+    );
+
+    fbq(
+      'track',
+      'PageView'
+    );
+
   </script>
 
   <noscript>
+
     <img
       height="1"
       width="1"
       style="display:none"
       src="https://www.facebook.com/tr?id=1097307739687772&ev=PageView&noscript=1"
-    />
-  </noscript>
+    >
 
-  <!-- End Meta Pixel Code -->
+  </noscript>
 
 </head>
 
+
 <body>
 
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
   <header>
+
     <div class="container header-inner">
 
-      <a href="#" class="logo">
+      <a
+        href="#"
+        class="logo"
+      >
         100 DOCES
         <span>SEM AÇÚCAR</span>
       </a>
 
-      <a href="#receitas" class="header-book-button">
+      <a
+        href="#receitas"
+        class="header-book-button"
+      >
         SEU CADERNO DE RECEITAS
         <span>→</span>
       </a>
 
     </div>
+
   </header>
 
+
   <main>
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
 
     <section class="hero">
 
       <div class="container hero-grid">
+
 
         <div class="hero-copy">
 
@@ -933,32 +1253,43 @@
             🍫 100 receitas + 5 bônus
           </div>
 
+
           <h1>
             Quer emagrecer, mas não quer
             <strong>parar de comer doce?</strong>
           </h1>
 
+
           <p class="hero-subtitle">
+
             Conheça
-            <strong>100 receitas de doces sem açúcar adicionado</strong>
+            <strong>
+              100 receitas de doces sem açúcar adicionado
+            </strong>
+
             para quem quer cuidar da alimentação e continuar tendo opções deliciosas de sobremesa.
+
           </p>
 
+
           <div class="category-pills">
+
             <span class="pill">🍫 Chocolates</span>
             <span class="pill">🍰 Bolos</span>
             <span class="pill">🍮 Pudins</span>
             <span class="pill">🍓 Frutas</span>
             <span class="pill">🍪 Cookies</span>
             <span class="pill">🍨 Gelados</span>
+
           </div>
 
+
           <p class="hero-note">
-            Acesso digital imediato •
-            Leia no celular, tablet ou computador
+            Acesso digital imediato • Leia no celular, tablet ou computador
           </p>
 
         </div>
+
 
         <div class="hero-product">
 
@@ -975,9 +1306,15 @@
 
         </div>
 
+
       </div>
 
     </section>
+
+
+    <!-- =====================================================
+         TRUST
+    ===================================================== -->
 
     <section class="trust-bar">
 
@@ -999,9 +1336,15 @@
 
     </section>
 
+
+    <!-- =====================================================
+         PROBLEMA
+    ===================================================== -->
+
     <section class="section">
 
       <div class="container">
+
 
         <div class="section-title">
 
@@ -1015,7 +1358,9 @@
 
         </div>
 
+
         <div class="pain-grid">
+
 
           <article class="pain-card">
 
@@ -1033,6 +1378,7 @@
 
           </article>
 
+
           <article class="pain-card">
 
             <div class="pain-icon">
@@ -1048,6 +1394,7 @@
             </p>
 
           </article>
+
 
           <article class="pain-card">
 
@@ -1065,20 +1412,30 @@
 
           </article>
 
+
         </div>
 
       </div>
 
     </section>
 
-    <section class="section" id="receitas">
+
+    <!-- =====================================================
+         RECEITAS
+    ===================================================== -->
+
+    <section
+      class="section"
+      id="receitas"
+    >
 
       <div class="container">
+
 
         <div class="section-title">
 
           <span class="mini">
-            Veja tudo que você vai receber
+            Dentro do ebook
           </span>
 
           <h2>
@@ -1091,7 +1448,9 @@
 
         </div>
 
+
         <div class="recipe-grid">
+
 
           <div class="recipe-card">
             <span class="emoji">🍫</span>
@@ -1099,11 +1458,13 @@
             <span>10 receitas</span>
           </div>
 
+
           <div class="recipe-card">
             <span class="emoji">🍰</span>
             <strong>Bolos &amp; Brownies</strong>
             <span>10 receitas</span>
           </div>
+
 
           <div class="recipe-card">
             <span class="emoji">🥣</span>
@@ -1111,11 +1472,13 @@
             <span>10 receitas</span>
           </div>
 
+
           <div class="recipe-card">
             <span class="emoji">🍮</span>
             <strong>Pudins</strong>
             <span>10 receitas</span>
           </div>
+
 
           <div class="recipe-card">
             <span class="emoji">🍓</span>
@@ -1123,11 +1486,13 @@
             <span>10 receitas</span>
           </div>
 
+
           <div class="recipe-card">
             <span class="emoji">🍨</span>
             <strong>Gelados</strong>
             <span>10 receitas</span>
           </div>
+
 
           <div class="recipe-card">
             <span class="emoji">🍪</span>
@@ -1135,11 +1500,13 @@
             <span>10 receitas</span>
           </div>
 
+
           <div class="recipe-card">
             <span class="emoji">⚡</span>
             <strong>Receitas Rápidas</strong>
             <span>10 receitas</span>
           </div>
+
 
           <div class="recipe-card">
             <span class="emoji">🥥</span>
@@ -1147,11 +1514,13 @@
             <span>10 receitas</span>
           </div>
 
+
           <div class="recipe-card">
             <span class="emoji">🍓</span>
             <strong>Combinações Especiais</strong>
             <span>10 receitas</span>
           </div>
+
 
         </div>
 
@@ -1159,9 +1528,15 @@
 
     </section>
 
+
+    <!-- =====================================================
+         BÔNUS
+    ===================================================== -->
+
     <section class="section bonus-section">
 
       <div class="container">
+
 
         <div class="section-title">
 
@@ -1170,7 +1545,7 @@
           </span>
 
           <h2>
-            Você não leva apenas o livro.
+            Veja tudo que você vai receber.
           </h2>
 
           <p>
@@ -1179,11 +1554,12 @@
 
         </div>
 
+
         <div class="bonus-showcase">
 
           <img
             src="./capabonus.png"
-            alt="Mockup do livro principal e dos 5 bônus exclusivos do kit de sobremesas"
+            alt="Mockup do livro principal e dos 5 bônus digitais"
             class="bonus-mockup"
             loading="lazy"
             decoding="async"
@@ -1191,7 +1567,9 @@
 
         </div>
 
+
         <div class="bonus-grid">
+
 
           <article class="bonus">
 
@@ -1209,6 +1587,7 @@
 
           </article>
 
+
           <article class="bonus">
 
             <div class="bonus-number">
@@ -1224,6 +1603,7 @@
             </p>
 
           </article>
+
 
           <article class="bonus">
 
@@ -1241,6 +1621,7 @@
 
           </article>
 
+
           <article class="bonus">
 
             <div class="bonus-number">
@@ -1256,6 +1637,7 @@
             </p>
 
           </article>
+
 
           <article class="bonus">
 
@@ -1273,78 +1655,85 @@
 
           </article>
 
+
         </div>
 
       </div>
 
     </section>
 
+
     <!-- =====================================================
          OFERTA
-         ===================================================== -->
+    ===================================================== -->
 
-    <section class="section offer-section" id="oferta">
+    <section
+      class="section offer-section"
+      id="oferta"
+    >
 
       <div class="container">
 
+
         <div class="offer-card">
+
 
           <div class="mini">
             SEU KIT COMPLETO DE SOBREMESAS
           </div>
 
+
           <h2>
             100 receitas + 5 bônus para você ter sempre uma opção de doce à mão.
           </h2>
+
 
           <p class="offer-description">
             Um material digital completo para você consultar pelo celular, tablet ou computador.
           </p>
 
+
           <!-- BALÃO ANIMADO -->
 
           <div class="offer-urgency">
-            🔥 OFERTA ESPECIAL • PROMOÇAO IMPERDÍVEL
+            🔥 OFERTA ESPECIAL • PROMOÇÃO IMPERDÍVEL
           </div>
+
 
           <!-- PREÇO -->
 
           <div class="price-label">
 
             DE
+
             <span class="old-price">
               R$49,90
             </span>
 
-            <strong>
-              POR APENAS
-            </strong>
+            POR
 
           </div>
+
 
           <div class="price">
 
-            <small>
-              R$
-            </small>
-
-            10,00
+            <small>R$</small>10,00
 
           </div>
+
 
           <p class="price-saving">
 
             <strong>
-              ⚡ Leve o kit completo por apenas R$10,00.
+              ⚡ Kit completo por apenas R$10,00
             </strong>
-
-            <br>
 
             100 receitas + 5 bônus em um único material digital.
 
           </p>
 
-          <!-- CTA PRINCIPAL -->
+
+          <!-- CTA -->
 
           <a
             href="https://pay.kiwify.com.br/b53BYvD"
@@ -1353,13 +1742,15 @@
             QUERO MEU KIT COMPLETO AGORA →
           </a>
 
+
           <p class="offer-details">
 
-            🔒 Compra segura •
-            📲 Acesso imediato no email •
-            ⚡ Liberação após confirmação
+            🔒 Compra segura • 📲 Acesso digital • ⚡ Liberação após confirmação
 
           </p>
+
+
+          <!-- GARANTIA -->
 
           <div class="guarantee">
 
@@ -1373,15 +1764,22 @@
 
           </div>
 
+
         </div>
 
       </div>
 
     </section>
 
+
+    <!-- =====================================================
+         DECISÃO
+    ===================================================== -->
+
     <section class="section">
 
       <div class="container">
+
 
         <div class="section-title">
 
@@ -1399,7 +1797,9 @@
 
         </div>
 
+
         <div class="decision-grid">
+
 
           <article class="decision-card">
 
@@ -1417,6 +1817,7 @@
 
           </article>
 
+
           <article class="decision-card">
 
             <span class="icon">
@@ -1432,6 +1833,7 @@
             </p>
 
           </article>
+
 
           <article class="decision-card">
 
@@ -1449,6 +1851,7 @@
 
           </article>
 
+
           <article class="decision-card">
 
             <span class="icon">
@@ -1465,19 +1868,28 @@
 
           </article>
 
+
         </div>
+
 
         <p class="decision-note">
           Acesso digital • Compra segura • 7 dias de garantia
         </p>
 
+
       </div>
 
     </section>
 
+
+    <!-- =====================================================
+         FAQ
+    ===================================================== -->
+
     <section class="section">
 
       <div class="container">
+
 
         <div class="section-title">
 
@@ -1491,7 +1903,9 @@
 
         </div>
 
+
         <div class="faq">
+
 
           <details class="faq-item">
 
@@ -1501,17 +1915,18 @@
                 O que eu vou receber?
               </span>
 
-              <span>
-                +
-              </span>
+              <span>+</span>
 
             </summary>
 
             <div class="faq-answer">
+
               Você receberá o material digital com 100 receitas de doces sem açúcar adicionado, além dos 5 bônus apresentados na oferta.
+
             </div>
 
           </details>
+
 
           <details class="faq-item">
 
@@ -1521,17 +1936,18 @@
                 Preciso ter experiência na cozinha?
               </span>
 
-              <span>
-                +
-              </span>
+              <span>+</span>
 
             </summary>
 
             <div class="faq-answer">
+
               Não. A proposta é apresentar receitas para diferentes níveis de facilidade. Sempre leia os ingredientes e o modo de preparo antes de começar.
+
             </div>
 
           </details>
+
 
           <details class="faq-item">
 
@@ -1541,17 +1957,18 @@
                 O material é físico?
               </span>
 
-              <span>
-                +
-              </span>
+              <span>+</span>
 
             </summary>
 
             <div class="faq-answer">
+
               Não. É um produto digital que pode ser acessado em dispositivos compatíveis com o formato disponibilizado após a compra.
+
             </div>
 
           </details>
+
 
           <details class="faq-item">
 
@@ -1561,19 +1978,22 @@
                 “Sem açúcar” significa que posso consumir sem nenhuma preocupação?
               </span>
 
-              <span>
-                +
-              </span>
+              <span>+</span>
 
             </summary>
 
             <div class="faq-answer">
+
               Não. “Sem açúcar adicionado” significa que não utilizamos açúcar adicionado como ingrediente nas preparações.
+
               Isso não significa que as receitas sejam livres de carboidratos ou açúcares naturalmente presentes nos alimentos.
+
               Pessoas com diabetes, alergias, intolerâncias ou outras condições de saúde devem seguir as orientações de seus profissionais de saúde.
+
             </div>
 
           </details>
+
 
           <details class="faq-item">
 
@@ -1583,17 +2003,18 @@
                 Como recebo o acesso?
               </span>
 
-              <span>
-                +
-              </span>
+              <span>+</span>
 
             </summary>
 
             <div class="faq-answer">
+
               Após a confirmação da compra, o acesso será disponibilizado conforme as instruções apresentadas no checkout.
+
             </div>
 
           </details>
+
 
           <details class="faq-item">
 
@@ -1603,17 +2024,18 @@
                 Posso acessar pelo celular?
               </span>
 
-              <span>
-                +
-              </span>
+              <span>+</span>
 
             </summary>
 
             <div class="faq-answer">
+
               Sim. O material foi pensado para ser consultado também pelo celular, além de outros dispositivos compatíveis.
+
             </div>
 
           </details>
+
 
         </div>
 
@@ -1621,44 +2043,45 @@
 
     </section>
 
+
+    <!-- =====================================================
+         CTA FINAL
+    ===================================================== -->
+
     <section class="final-cta">
 
       <div class="container">
+
 
         <h2>
           Sua vontade de doce não precisa significar sempre a mesma sobremesa.
         </h2>
 
+
         <p>
           Tenha 100 ideias diferentes para explorar e descubra novas formas de preparar seus doces sem açúcar adicionado.
         </p>
 
+
         <a
           href="#oferta"
           class="hero-button"
-          onclick="
-            setTimeout(
-              function(){
-                document
-                  .getElementById('oferta')
-                  .scrollIntoView({
-                    behavior:'smooth',
-                    block:'start'
-                  });
-              },
-              50
-            );
-            return false;
-          "
         >
           QUERO AS 100 RECEITAS →
         </a>
+
 
       </div>
 
     </section>
 
+
   </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
 
   <footer>
 
@@ -1668,8 +2091,7 @@
         100 Doces Sem Açúcar
       </strong>
 
-      <br>
-      <br>
+      <br><br>
 
       Material digital.
 
@@ -1680,6 +2102,8 @@
 
   </footer>
 
+
 </body>
+
 </html>
 ```
