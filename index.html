@@ -1107,14 +1107,14 @@
     }
 
     .decision-card{
-      padding:19px;
+      padding:19px 17px;
 
       background:#fff;
       border:1px solid #eadbd0;
       border-radius:16px;
 
       box-shadow:
-        0 8px 22px rgba(70,35,20,.05);
+        0 7px 20px rgba(70,35,20,.045);
     }
 
     .decision-card .icon{
@@ -1126,7 +1126,7 @@
     }
 
     .decision-card h3{
-      margin-bottom:5px;
+      margin-bottom:4px;
 
       color:#4a2c20;
       font-size:15px;
@@ -1143,6 +1143,7 @@
       margin-top:9px;
 
       color:#8a766c;
+
       font-size:10px;
       text-align:center;
     }
@@ -1175,9 +1176,9 @@
       background:transparent;
 
       color:#472c21;
+
       font-size:13px;
       font-weight:850;
-      text-align:left;
 
       cursor:pointer;
       list-style:none;
@@ -1195,7 +1196,8 @@
       transition:transform .2s;
     }
 
-    .faq-item[open] .faq-question span:last-child{
+    .faq-item[open]
+    .faq-question span:last-child{
       transform:rotate(45deg);
     }
 
@@ -1203,7 +1205,9 @@
       padding:0 0 17px;
 
       color:#756157;
+
       font-size:12.5px;
+      line-height:1.55;
     }
 
 
@@ -1212,7 +1216,7 @@
     ===================================================== */
 
     .final-cta{
-      padding:56px 0;
+      padding:58px 0;
 
       background:#f4e7dc;
 
@@ -1221,13 +1225,13 @@
 
     .final-cta h2{
       max-width:760px;
-      margin:0 auto 12px;
+      margin:0 auto 11px;
 
       color:#40261c;
 
-      font-size:clamp(29px,8vw,46px);
+      font-size:clamp(29px,8vw,47px);
       line-height:1.08;
-      letter-spacing:-1.6px;
+      letter-spacing:-1.5px;
     }
 
     .final-cta p{
@@ -1240,8 +1244,7 @@
 
     .hero-button{
       max-width:520px;
-      min-height:56px;
-      margin:0 auto;
+      margin:auto;
 
       background:#8f4e2c;
       color:#fff;
@@ -1250,13 +1253,20 @@
         0 13px 28px rgba(143,78,44,.20);
     }
 
+    .hero-button:hover{
+      transform:translateY(-2px);
+
+      box-shadow:
+        0 18px 32px rgba(143,78,44,.25);
+    }
+
 
     /* =====================================================
-       RODAPÉ
+       FOOTER
     ===================================================== */
 
     footer{
-      padding:26px 0 28px;
+      padding:26px 0 29px;
 
       background:#3e251c;
       color:#d9c9c0;
@@ -1281,17 +1291,20 @@
       }
 
       .section{
-        padding:82px 0;
+        padding:78px 0;
       }
 
       .hero{
-        padding:68px 0 78px;
+        padding:64px 0 74px;
       }
 
       .hero-grid{
         display:grid;
+
         grid-template-columns:1fr 1fr;
+
         align-items:center;
+
         gap:55px;
       }
 
@@ -1305,10 +1318,11 @@
 
       .category-pills{
         flex-wrap:wrap;
-        overflow:visible;
 
-        margin:0 0 26px;
+        margin:0 0 24px;
         padding:0;
+
+        overflow:visible;
       }
 
       .trust-grid{
@@ -1318,70 +1332,102 @@
 
       .pain-grid{
         grid-template-columns:repeat(3,1fr);
-        gap:18px;
+        gap:17px;
       }
 
       .recipe-grid{
         grid-template-columns:repeat(5,1fr);
-        gap:14px;
-      }
-
-      .bonus-showcase{
-        margin-bottom:42px;
+        gap:13px;
       }
 
       .bonus-grid{
         grid-template-columns:repeat(5,1fr);
-        gap:16px;
+        gap:15px;
+      }
+
+      .bonus-showcase{
+        margin-bottom:40px;
       }
 
       .offer-card{
-        padding:52px 30px;
+        padding:48px 30px;
       }
 
       .offer-button{
-        width:min(100%,420px);
-        margin:0 auto;
+        width:min(100%,430px);
+        margin:auto;
       }
 
       .decision-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:14px;
+        grid-template-columns:1fr 1fr;
       }
 
     }
 
   </style>
 
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=function(){n.queue.push(n)};
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
-  t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)
-  }(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
 
-  fbq('init', '1097307739687772');
-  fbq('track', 'PageView');
+  <!-- META PIXEL -->
+
+  <script>
+
+    !function(f,b,e,v,n,t,s)
+    {
+      if(f.fbq)return;
+
+      n=f.fbq=function(){
+        n.callMethod?
+        n.callMethod.apply(n,arguments):
+        n.queue.push(arguments)
+      };
+
+      if(!f._fbq)f._fbq=n;
+
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+
+      s=b.getElementsByTagName(e)[0];
+
+      s.parentNode.insertBefore(t,s)
+
+    }(
+      window,
+      document,
+      'script',
+      'https://connect.facebook.net/en_US/fbevents.js'
+    );
+
+    fbq(
+      'init',
+      '1097307739687772'
+    );
+
+    fbq(
+      'track',
+      'PageView'
+    );
+
   </script>
 
   <noscript>
+
     <img
       height="1"
       width="1"
       style="display:none"
       src="https://www.facebook.com/tr?id=1097307739687772&ev=PageView&noscript=1"
-      alt=""
     >
+
   </noscript>
-  <!-- End Meta Pixel Code -->
 
 </head>
+
 
 <body>
 
@@ -1394,7 +1440,10 @@
 
     <div class="container header-inner">
 
-      <a href="#" class="logo">
+      <a
+        href="#"
+        class="logo"
+      >
         100 DOCES
         <span>SEM AÇÚCAR</span>
       </a>
@@ -1423,35 +1472,43 @@
 
       <div class="container hero-grid">
 
+
         <div class="hero-copy">
 
           <div class="eyebrow">
             🍫 100 receitas + 5 bônus
           </div>
 
+
           <h1>
             Quer emagrecer, mas não quer
-            <strong>
-              parar de comer doce?
-            </strong>
+            <strong>parar de comer doce?</strong>
           </h1>
 
+
           <p class="hero-subtitle">
+
             Conheça
             <strong>
               100 receitas de doces sem açúcar adicionado
             </strong>
+
             para quem quer cuidar da alimentação e continuar tendo opções deliciosas de sobremesa.
+
           </p>
 
+
           <div class="category-pills">
+
             <span class="pill">🍫 Chocolates</span>
             <span class="pill">🍰 Bolos</span>
             <span class="pill">🍮 Pudins</span>
             <span class="pill">🍓 Frutas</span>
             <span class="pill">🍪 Cookies</span>
             <span class="pill">🍨 Gelados</span>
+
           </div>
+
 
           <p class="hero-note">
             Acesso digital imediato • Leia no celular, tablet ou computador
@@ -1464,6 +1521,7 @@
 
           <img
             src="/capa-662.webp"
+            sizes="(max-width: 759px) 100vw, 540px"
             alt="Livro digital 100 Doces Sem Açúcar"
             class="hero-mockup"
             width="662"
@@ -1474,6 +1532,7 @@
           >
 
         </div>
+
 
       </div>
 
@@ -1513,6 +1572,7 @@
 
       <div class="container">
 
+
         <div class="section-title">
 
           <h2>
@@ -1525,7 +1585,9 @@
 
         </div>
 
+
         <div class="pain-grid">
+
 
           <article class="pain-card">
 
@@ -1543,6 +1605,7 @@
 
           </article>
 
+
           <article class="pain-card">
 
             <div class="pain-icon">
@@ -1559,6 +1622,7 @@
 
           </article>
 
+
           <article class="pain-card">
 
             <div class="pain-icon">
@@ -1574,6 +1638,7 @@
             </p>
 
           </article>
+
 
         </div>
 
@@ -1593,6 +1658,7 @@
 
       <div class="container">
 
+
         <div class="section-title">
 
           <span class="mini">
@@ -1609,7 +1675,9 @@
 
         </div>
 
+
         <div class="recipe-grid">
+
 
           <div class="recipe-card">
             <span class="emoji">🍫</span>
@@ -1617,11 +1685,13 @@
             <span>10 receitas</span>
           </div>
 
+
           <div class="recipe-card">
             <span class="emoji">🍰</span>
             <strong>Bolos &amp; Brownies</strong>
             <span>10 receitas</span>
           </div>
+
 
           <div class="recipe-card">
             <span class="emoji">🥣</span>
@@ -1629,11 +1699,13 @@
             <span>10 receitas</span>
           </div>
 
+
           <div class="recipe-card">
             <span class="emoji">🍮</span>
             <strong>Pudins</strong>
             <span>10 receitas</span>
           </div>
+
 
           <div class="recipe-card">
             <span class="emoji">🍓</span>
@@ -1641,11 +1713,13 @@
             <span>10 receitas</span>
           </div>
 
+
           <div class="recipe-card">
             <span class="emoji">🍨</span>
             <strong>Gelados</strong>
             <span>10 receitas</span>
           </div>
+
 
           <div class="recipe-card">
             <span class="emoji">🍪</span>
@@ -1653,11 +1727,13 @@
             <span>10 receitas</span>
           </div>
 
+
           <div class="recipe-card">
             <span class="emoji">⚡</span>
             <strong>Receitas Rápidas</strong>
             <span>10 receitas</span>
           </div>
+
 
           <div class="recipe-card">
             <span class="emoji">🥥</span>
@@ -1665,11 +1741,13 @@
             <span>10 receitas</span>
           </div>
 
+
           <div class="recipe-card">
             <span class="emoji">🍓</span>
             <strong>Combinações Especiais</strong>
             <span>10 receitas</span>
           </div>
+
 
         </div>
 
@@ -1682,113 +1760,118 @@
          BÔNUS
     ===================================================== -->
 
-    <section class="section bonus-section">
+   <section class="section bonus-section">
 
-      <div class="container">
+  <div class="container">
 
-        <div class="section-title">
+    <div class="section-title">
 
-          <span class="mini">
-            E ainda tem mais
-          </span>
+      <span class="mini">
+        E ainda tem mais
+      </span>
 
-          <h2>
-            Veja tudo que você vai receber.
-          </h2>
+      <h2>
+        Veja tudo que você vai receber.
+      </h2>
 
-          <p>
-            Ao adquirir o material, você também recebe conteúdos extras para facilitar sua rotina.
-          </p>
+      <p>
+        Ao adquirir o material, você também recebe conteúdos extras para facilitar sua rotina.
+      </p>
 
-        </div>
+    </div>
 
-        <div class="bonus-showcase">
+    <div class="bonus-showcase">
 
-          <img
-            src="/capabonus.webp"
-            alt="Mockup do livro principal e dos 5 bônus digitais"
-            class="bonus-mockup"
-            width="672"
-            height="950"
-            loading="eager"
-            decoding="async"
-          >
+  <img
+    src="/capabonus.webp"
+    alt="Mockup do livro principal e dos 5 bônus digitais"
+    class="bonus-mockup"
+    width="672"
+    height="950"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+  >
 
-        </div>
+</div>
 
-        <div class="bonus-grid">
+    </div>
 
-          <article class="bonus">
-            <div class="bonus-number">B1</div>
+    <div class="bonus-grid">
 
-            <h3>
-              🎁 Bônus 01 — Qual Doce Eu Faço Hoje?
-            </h3>
+      <!-- BÔNUS 1 -->
+      <article class="bonus">
+        <div class="bonus-number">B1</div>
 
-            <p>
-              Guia rápido para escolher uma receita conforme a vontade,
-              tempo disponível e tipo de sobremesa.
-            </p>
-          </article>
+        <h3>
+          🎁 Bônus 01 — Qual Doce Eu Faço Hoje?
+        </h3>
 
-          <article class="bonus">
-            <div class="bonus-number">B2</div>
+        <p>
+          Guia rápido para escolher uma receita conforme a vontade,
+          tempo disponível e tipo de sobremesa.
+        </p>
+      </article>
 
-            <h3>
-              🎁 Bônus 02 — Lista de Compras das 100 Receitas
-            </h3>
+      <!-- BÔNUS 2 -->
+      <article class="bonus">
+        <div class="bonus-number">B2</div>
 
-            <p>
-              Lista organizada por categorias para facilitar as compras
-              e evitar compras desnecessárias.
-            </p>
-          </article>
+        <h3>
+          🎁 Bônus 02 — Lista de Compras das 100 Receitas
+        </h3>
 
-          <article class="bonus">
-            <div class="bonus-number">B3</div>
+        <p>
+          Lista organizada por categorias para facilitar as compras
+          e evitar compras desnecessárias.
+        </p>
+      </article>
 
-            <h3>
-              🎁 Bônus 03 — Receitas Para Cada Momento
-            </h3>
+      <!-- BÔNUS 3 -->
+      <article class="bonus">
+        <div class="bonus-number">B3</div>
 
-            <p>
-              Seleção organizada por situações e momentos diferentes
-              do dia.
-            </p>
-          </article>
+        <h3>
+          🎁 Bônus 03 — Receitas Para Cada Momento
+        </h3>
 
-          <article class="bonus">
-            <div class="bonus-number">B4</div>
+        <p>
+          Seleção organizada por situações e momentos diferentes
+          do dia.
+        </p>
+      </article>
 
-            <h3>
-              🎁 Bônus 04 — Mapa das Receitas Mais Rápidas
-            </h3>
+      <!-- BÔNUS 4 -->
+      <article class="bonus">
+        <div class="bonus-number">B4</div>
 
-            <p>
-              Receitas organizadas pelo tempo estimado de preparo.
-            </p>
-          </article>
+        <h3>
+          🎁 Bônus 04 — Mapa das Receitas Mais Rápidas
+        </h3>
 
-          <article class="bonus">
-            <div class="bonus-number">B5</div>
+        <p>
+          Receitas organizadas pelo tempo estimado de preparo.
+        </p>
+      </article>
 
-            <h3>
-              🎁 Bônus 05 — Top 20 Para Repetir
-            </h3>
+      <!-- BÔNUS 5 -->
+      <article class="bonus">
+        <div class="bonus-number">B5</div>
 
-            <p>
-              Seleção de 20 receitas para marcar suas favoritas.
-            </p>
-          </article>
+        <h3>
+          🎁 Bônus 05 — Top 20 Para Repetir
+        </h3>
 
-        </div>
+        <p>
+          Seleção de 20 receitas para marcar suas favoritas.
+        </p>
+      </article>
 
-      </div>
+    </div>
 
-    </section>
+  </div>
 
-
-    <!-- =====================================================
+</section>   <!-- =====================================================
          DEPOIMENTOS
     ===================================================== -->
 
@@ -1798,6 +1881,7 @@
     >
 
       <div class="container">
+
 
         <div class="section-title">
 
@@ -1811,19 +1895,22 @@
 
         </div>
 
+
         <p class="testimonials-hint">
           ← DESLIZE PARA O LADO E VEJA OS DEPOIMENTOS →
         </p>
+
 
         <div
           class="testimonials-slider"
           aria-label="Depoimentos de clientes"
         >
 
+
           <article class="testimonial-card">
 
             <img
-              src="/.webp"
+              src="/%C2%A0.webp"
               alt="Depoimento de cliente sobre as 100 receitas sem açúcar"
               class="testimonial-image"
               loading="lazy"
@@ -1832,10 +1919,11 @@
 
           </article>
 
+
           <article class="testimonial-card">
 
             <img
-              src="/.webp"
+              src="/%C2%A0.webp"
               alt="Depoimento de cliente sobre as 100 receitas sem açúcar"
               class="testimonial-image"
               loading="lazy"
@@ -1844,10 +1932,11 @@
 
           </article>
 
+
           <article class="testimonial-card">
 
             <img
-              src="/.webp"
+              src="/%C2%A0.webp"
               alt="Depoimento de cliente sobre as 100 receitas sem açúcar"
               class="testimonial-image"
               loading="lazy"
@@ -1855,12 +1944,15 @@
             >
 
           </article>
+
 
         </div>
+
 
         <p class="testimonials-note">
           QUEM BAIXOU O EBOOK RECOMENDA. AGORA É SUA VEZ!
         </p>
+
 
       </div>
 
@@ -1878,35 +1970,53 @@
 
       <div class="container">
 
+
         <div class="offer-card">
+
 
           <div class="mini">
             SEU KIT COMPLETO DE SOBREMESAS
           </div>
 
+
           <h2>
             100 receitas + 5 bônus para você ter sempre uma opção de doce à mão.
           </h2>
+
 
           <p class="offer-description">
             Um material digital completo para você consultar pelo celular, tablet ou computador.
           </p>
 
+
+          <!-- BALÃO ANIMADO -->
+
           <div class="offer-urgency">
             🔥 OFERTA ESPECIAL • PROMOÇÃO IMPERDÍVEL
           </div>
 
+
+          <!-- PREÇO -->
+
           <div class="price-label">
+
             DE
+
             <span class="old-price">
               R$49,90
             </span>
+
             POR
+
           </div>
 
+
           <div class="price">
+
             <small>R$</small>10,00
+
           </div>
+
 
           <p class="price-saving">
 
@@ -1918,6 +2028,9 @@
 
           </p>
 
+
+          <!-- CTA -->
+
           <a
             href="https://pay.kiwify.com.br/b53BYvD"
             class="offer-button"
@@ -1925,9 +2038,15 @@
             QUERO MEU KIT COMPLETO AGORA →
           </a>
 
+
           <p class="offer-details">
+
             🔒 Compra segura • 📲 Acesso digital • ⚡ Liberação após confirmação
+
           </p>
+
+
+          <!-- GARANTIA -->
 
           <div class="guarantee">
 
@@ -1940,6 +2059,7 @@
             </p>
 
           </div>
+
 
         </div>
 
@@ -1955,6 +2075,7 @@
     <section class="section">
 
       <div class="container">
+
 
         <div class="section-title">
 
@@ -1972,7 +2093,9 @@
 
         </div>
 
+
         <div class="decision-grid">
+
 
           <article class="decision-card">
 
@@ -1990,6 +2113,7 @@
 
           </article>
 
+
           <article class="decision-card">
 
             <span class="icon">
@@ -2005,6 +2129,7 @@
             </p>
 
           </article>
+
 
           <article class="decision-card">
 
@@ -2022,6 +2147,7 @@
 
           </article>
 
+
           <article class="decision-card">
 
             <span class="icon">
@@ -2038,11 +2164,14 @@
 
           </article>
 
+
         </div>
+
 
         <p class="decision-note">
           Acesso digital • Compra segura • 7 dias de garantia
         </p>
+
 
       </div>
 
@@ -2057,6 +2186,7 @@
 
       <div class="container">
 
+
         <div class="section-title">
 
           <span class="mini">
@@ -2069,89 +2199,139 @@
 
         </div>
 
+
         <div class="faq">
 
+
           <details class="faq-item">
 
             <summary class="faq-question">
-              <span>O que eu vou receber?</span>
+
+              <span>
+                O que eu vou receber?
+              </span>
+
               <span>+</span>
+
             </summary>
 
             <div class="faq-answer">
+
               Você receberá o material digital com 100 receitas de doces sem açúcar adicionado, além dos 5 bônus apresentados na oferta.
+
             </div>
 
           </details>
 
+
           <details class="faq-item">
 
             <summary class="faq-question">
-              <span>Preciso ter experiência na cozinha?</span>
+
+              <span>
+                Preciso ter experiência na cozinha?
+              </span>
+
               <span>+</span>
+
             </summary>
 
             <div class="faq-answer">
+
               Não. A proposta é apresentar receitas para diferentes níveis de facilidade. Sempre leia os ingredientes e o modo de preparo antes de começar.
+
             </div>
 
           </details>
 
+
           <details class="faq-item">
 
             <summary class="faq-question">
-              <span>O material é físico?</span>
+
+              <span>
+                O material é físico?
+              </span>
+
               <span>+</span>
+
             </summary>
 
             <div class="faq-answer">
+
               Não. É um produto digital que pode ser acessado em dispositivos compatíveis com o formato disponibilizado após a compra.
+
             </div>
 
           </details>
 
+
           <details class="faq-item">
 
             <summary class="faq-question">
-              <span>“Sem açúcar” significa que posso consumir sem nenhuma preocupação?</span>
+
+              <span>
+                “Sem açúcar” significa que posso consumir sem nenhuma preocupação?
+              </span>
+
               <span>+</span>
+
             </summary>
 
             <div class="faq-answer">
+
               Não. “Sem açúcar adicionado” significa que não utilizamos açúcar adicionado como ingrediente nas preparações.
 
               Isso não significa que as receitas sejam livres de carboidratos ou açúcares naturalmente presentes nos alimentos.
 
               Pessoas com diabetes, alergias, intolerâncias ou outras condições de saúde devem seguir as orientações de seus profissionais de saúde.
+
             </div>
 
           </details>
 
+
           <details class="faq-item">
 
             <summary class="faq-question">
-              <span>Como recebo o acesso?</span>
+
+              <span>
+                Como recebo o acesso?
+              </span>
+
               <span>+</span>
+
             </summary>
 
             <div class="faq-answer">
+
               Após a confirmação da compra, o acesso será disponibilizado conforme as instruções apresentadas no checkout.
+
             </div>
 
           </details>
+
 
           <details class="faq-item">
 
             <summary class="faq-question">
-              <span>Posso acessar pelo celular?</span>
+
+              <span>
+                Posso acessar pelo celular?
+              </span>
+
               <span>+</span>
+
             </summary>
 
             <div class="faq-answer">
+
               Sim. O material foi pensado para ser consultado também pelo celular, além de outros dispositivos compatíveis.
+
             </div>
 
           </details>
+
 
         </div>
 
@@ -2168,13 +2348,16 @@
 
       <div class="container">
 
+
         <h2>
           Sua vontade de doce não precisa significar sempre a mesma sobremesa.
         </h2>
 
+
         <p>
           Tenha 100 ideias diferentes para explorar e descubra novas formas de preparar seus doces sem açúcar adicionado.
         </p>
+
 
         <a
           href="#oferta"
@@ -2182,6 +2365,7 @@
         >
           QUERO AS 100 RECEITAS →
         </a>
+
 
       </div>
 
