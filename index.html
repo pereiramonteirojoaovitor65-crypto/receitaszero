@@ -538,15 +538,16 @@
     }
 
     .bonus-mockup{
-      width:100%;
-      height:auto;
+  display:block;
+  width:100%;
+  max-width:672px;
+  height:auto;
 
-      border-radius:17px;
+  border-radius:17px;
 
-      box-shadow:
-        0 18px 42px rgba(70,35,20,.15);
-    }
-
+  box-shadow:
+    0 18px 42px rgba(70,35,20,.15);
+}
     .bonus-grid{
       display:grid;
       grid-template-columns:1fr;
@@ -1781,17 +1782,17 @@
 
     <div class="bonus-showcase">
 
-      <img
-        src="./capabonus-672.webp"
-        srcset="./capabonus-672.webp 672w, ./capabonus.webp 1414w"
-        sizes="(max-width: 759px) 100vw, 672px"
-        alt="Mockup do livro principal e dos 5 bônus digitais"
-        class="bonus-mockup"
-        width="672"
-        height="950"
-        loading="lazy"
-        decoding="async"
-      >
+  <img
+    src="./capabonus-672.webp"
+    alt="Mockup do livro principal e dos 5 bônus digitais"
+    class="bonus-mockup"
+    width="672"
+    height="950"
+    loading="eager"
+    decoding="async"
+  >
+
+</div>
 
     </div>
 
